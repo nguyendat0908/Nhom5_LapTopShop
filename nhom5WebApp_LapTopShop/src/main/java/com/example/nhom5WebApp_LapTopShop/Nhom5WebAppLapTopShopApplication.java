@@ -1,4 +1,4 @@
-package com.example.nhom5WebApp_LapTopShop;
+package com.example.nhom5webapp_laptopshop;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
