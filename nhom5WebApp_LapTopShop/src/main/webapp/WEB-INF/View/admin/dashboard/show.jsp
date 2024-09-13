@@ -11,11 +11,13 @@ pageEncoding="UTF-8"%>
     />
     <link
       rel="stylesheet"
-      href="/nhom5WebApp_LapTopShop/src/main/webapp/resources/css/styles.css"
+      href="http://localhost:8080/Nhom5_LapTopShop/nhom5WebApp_LapTopShop/src/main/webapp/resources/css/styles.css"
     />
     <title>Document</title>
   </head>
   <body>
+    <jsp:include page="../layout/header.jsp" />
+    <jsp:include page="../layout/sidebar.jsp" />
     <main class="content">
       <div class="container-fluid px-4">
         <h1>Dashboard</h1>
@@ -49,6 +51,7 @@ pageEncoding="UTF-8"%>
           </div>
         </div>
       </div>
+      <jsp:include page="../layout/footer.jsp" />
     </main>
   </body>
 </html>
