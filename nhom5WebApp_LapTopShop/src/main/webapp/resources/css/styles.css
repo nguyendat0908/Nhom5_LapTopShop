@@ -51,6 +51,9 @@ body {
 .mi {
   padding: 20px;
 }
+.nav-sidebar:hover{
+  background-color: #4e4e4e;
+}
 .sidebar ul {
   list-style-type: none;
   padding: 0;
@@ -61,11 +64,11 @@ body {
 }
 .sidebar ul li a {
   text-decoration: none;
-  color: rgb(172, 181, 189);
+  color: rgb(189, 189, 189);
 }
 .sidebar ul:nth-child(1) {
   font-size: 16px;
-  color: rgb(103, 112, 112);
+  color: rgb(143, 143, 143);
 }
 .th {
   background-color: rgb(190, 184, 184);
