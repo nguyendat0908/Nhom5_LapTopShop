@@ -58,6 +58,13 @@ body {
   list-style-type: none;
   padding: 0;
 }
+
+.nav-sidebar {
+  cursor: pointer;
+}
+.nav-sidebar:active{
+  background-color: #000;
+}
 .sidebar ul li i {
   padding-right: 5px;
   font-size: 15px;
