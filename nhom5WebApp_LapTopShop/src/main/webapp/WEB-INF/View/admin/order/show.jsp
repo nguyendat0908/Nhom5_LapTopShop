@@ -97,7 +97,7 @@ pageEncoding="UTF-8"%>
             </tbody>
           </table>
           <nav aria-label="Page navigation example">
-            <ul class="pagination mt-5 justify-content-center">
+            <ul class="pagination mt-5 pst-pagination">
               <li class="page-item">
                 <a class="page-link" href="#" aria-label="Previous">
                   <span aria-hidden="true">&laquo;</span>
