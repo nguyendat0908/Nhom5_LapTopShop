@@ -32,40 +32,40 @@ pageEncoding="UTF-8"%>
             <div class="row">
                 <div class="col">
                     <div class="form">                     
-                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <label for="exampleFormControlInput1" class="form-label">Name</label>
                         <input class="form-control form-control-sm" type="text" placeholder="" aria-label=".form-control-sm example">                                  
                     </div>
                 </div>
                 <div class="col">                   
                       <div class="form">                       
-                          <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                          <label for="exampleFormControlInput1" class="form-label">Price</label>
                           <input class="form-control form-control-sm" type="text" placeholder="" aria-label=".form-control-sm example">                                                                                          
                       </div>
                 </div>
             </div>
             <div class="row">
               <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                <label for="exampleFormControlTextarea1" class="form-label">Detail descreption</label>
                 <textarea class="form-control form-control-sm" id="exampleFormControlTextarea1" rows="3"></textarea> 
               </div>                                           
             </div>
             <div class="row">
               <div class="col">
                   <div class="form">                    
-                      <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                      <label for="exampleFormControlInput1" class="form-label">Short description</label>
                       <input class="form-control form-control-sm" type="text" placeholder="" aria-label=".form-control-sm example">                                  
                   </div>
               </div>
               <div class="col">                   
                     <div class="form">                     
-                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <label for="exampleFormControlInput1" class="form-label">Quanlity</label>
                         <input class="form-control form-control-sm" type="text" placeholder="" aria-label=".form-control-sm example">                                                                                        
                     </div>
               </div>
           </div>
           <div class="row">
             <div class="col">
-              <label for="exampleFormControlInput1" class="form-label">Email address</label>
+              <label for="exampleFormControlInput1" class="form-label">Factory </label>
               <select class="form-select form-select-sm" aria-label="Small select example">
                 <option selected>Open this select menu</option>
                 <option value="1">One</option>
@@ -74,7 +74,7 @@ pageEncoding="UTF-8"%>
               </select>
             </div>
             <div class="col">
-              <label for="exampleFormControlInput1" class="form-label">Email address</label>
+              <label for="exampleFormControlInput1" class="form-label">Target</label>
               <select class="form-select form-select-sm" aria-label="Small select example">
                 <option selected>Open this select menu</option>
                 <option value="1">One</option>
@@ -86,12 +86,15 @@ pageEncoding="UTF-8"%>
             <div class="row">
               <div class="col">                
                   <label for="formFileSm" class="form-label">Small file input example</label>
-                  <input class="form-control form-control-sm" id="formFileSm" type="file">                
+                  <input class="form-control form-control-sm" id="formFileSm" type="file">
+                                 
               </div>
               <div class="col">
-                <img src="" class="img-fluid" alt="...">
-
+                <img style="width: 300px" src="https://deviet.vn/wp-content/uploads/2019/04/vuong-quoc-anh.jpg" class="img-thumbnail" alt="...">
               </div>
+            </div>
+            <div>
+                <button type="button" class="btn btn-success">Create</button>
             </div>
           </div>
       <jsp:include page="../layout/footer.jsp" />
