@@ -51,7 +51,7 @@ body {
 .mi {
   padding: 20px;
 }
-.nav-sidebar:hover{
+.nav-sidebar:hover {
   background-color: #4e4e4e;
 }
 .sidebar ul {
@@ -62,7 +62,7 @@ body {
 .nav-sidebar {
   cursor: pointer;
 }
-.nav-sidebar:active{
+.nav-sidebar:active {
   background-color: #000;
 }
 .sidebar ul li i {
@@ -113,4 +113,8 @@ body {
   position: absolute;
   bottom: 10%;
   left: 50%;
+}
+.img-order {
+  width: 50px;
+  height: 50px;
 }
