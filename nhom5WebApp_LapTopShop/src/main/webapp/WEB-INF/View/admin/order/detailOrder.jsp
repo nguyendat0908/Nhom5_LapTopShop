@@ -25,7 +25,8 @@
                     <li class="breadcrumb-item active" aria-current="page"><a href="#">Order</a></li>
                     <li class="breadcrumb-item" aria-current="page">View Detail</li>
                 </ol>
-                <div class="mt-5">
+                <h4 class="m-0">Order Detail with ID = <span>1</span></h4>
+                <div class="mt-2">
                     <table class="table table-bordered align-middle text-center">
                         <thead>
                             <tr>
@@ -40,19 +41,67 @@
                             <tr>
                                 <td><img src="https://laptop88.vn/media/news/2910_hinhanhmaytinhxachtay.jpg"
                                         class="img-order rounded-circle" alt=""></td>
-                                <td>0 đ</td>
-                                <td>Normal User</td>
-                                <td></td>
                                 <td>
-                                    <a href="#" class="btn btn-success mx-1">View</a>
-                                    <a href="#" class="btn btn-warning mx-1">Update</a>
-                                    <a href="#" class="btn btn-danger mx-1">Delete</a>
+                                    <a href="#">Laptop Asus TUF Gaming</a>
+                                </td>
+                                <td>17,000,000 <span>đ</span></td>
+                                <td>3</td>
+                                <td>
+                                    52,000,000 <span>đ</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://laptop88.vn/media/news/2910_hinhanhmaytinhxachtay.jpg"
+                                        class="img-order rounded-circle" alt=""></td>
+                                <td>
+                                    <a href="#">Laptop Asus TUF Gaming</a>
+                                </td>
+                                <td>17,000,000 <span>đ</span></td>
+                                <td>3</td>
+                                <td>
+                                    52,000,000 <span>đ</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://laptop88.vn/media/news/2910_hinhanhmaytinhxachtay.jpg"
+                                        class="img-order rounded-circle" alt=""></td>
+                                <td>
+                                    <a href="#">Laptop Asus TUF Gaming</a>
+                                </td>
+                                <td>17,000,000 <span>đ</span></td>
+                                <td>3</td>
+                                <td>
+                                    52,000,000 <span>đ</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://laptop88.vn/media/news/2910_hinhanhmaytinhxachtay.jpg"
+                                        class="img-order rounded-circle" alt=""></td>
+                                <td>
+                                    <a href="#">Laptop Asus TUF Gaming</a>
+                                </td>
+                                <td>17,000,000 <span>đ</span></td>
+                                <td>3</td>
+                                <td>
+                                    52,000,000 <span>đ</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://laptop88.vn/media/news/2910_hinhanhmaytinhxachtay.jpg"
+                                        class="img-order rounded-circle" alt=""></td>
+                                <td>
+                                    <a href="#">Laptop Asus TUF Gaming</a>
+                                </td>
+                                <td>17,000,000 <span>đ</span></td>
+                                <td>3</td>
+                                <td>
+                                    52,000,000 <span>đ</span>
                                 </td>
                             </tr>
 
                         </tbody>
                     </table>
-                    <nav aria-label="Page navigation example">
+                    <!-- <nav aria-label="Page navigation example">
                         <ul class="pagination mt-5 pst-pagination">
                             <li class="page-item">
                                 <a class="page-link" href="#" aria-label="Previous">
@@ -70,7 +119,8 @@
                                 </a>
                             </li>
                         </ul>
-                    </nav>
+                    </nav> -->
+                    <a href="#" class="btn btn-success">Back</a>
                 </div>
             </div>
             <jsp:include page="../layout/footer.jsp" />
