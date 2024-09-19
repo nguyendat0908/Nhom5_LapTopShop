@@ -95,6 +95,61 @@ pageEncoding="UTF-8"%>
                   <a href="#" class="btn btn-danger mx-1">Delete</a>
                 </td>
               </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>0 đ</td>
+                <td>Normal User</td>
+                <td></td>
+                <td>
+                  <a href="#" class="btn btn-success mx-1">View</a>
+                  <a href="#" class="btn btn-warning mx-1">Update</a>
+                  <a href="#" class="btn btn-danger mx-1">Delete</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>0 đ</td>
+                <td>Normal User</td>
+                <td></td>
+                <td>
+                  <a href="#" class="btn btn-success mx-1">View</a>
+                  <a href="#" class="btn btn-warning mx-1">Update</a>
+                  <a href="#" class="btn btn-danger mx-1">Delete</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>0 đ</td>
+                <td>Normal User</td>
+                <td></td>
+                <td>
+                  <a href="#" class="btn btn-success mx-1">View</a>
+                  <a href="#" class="btn btn-warning mx-1">Update</a>
+                  <a href="#" class="btn btn-danger mx-1">Delete</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>0 đ</td>
+                <td>Normal User</td>
+                <td></td>
+                <td>
+                  <a href="#" class="btn btn-success mx-1">View</a>
+                  <a href="#" class="btn btn-warning mx-1">Update</a>
+                  <a href="#" class="btn btn-danger mx-1">Delete</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>0 đ</td>
+                <td>Normal User</td>
+                <td></td>
+                <td>
+                  <a href="#" class="btn btn-success mx-1">View</a>
+                  <a href="#" class="btn btn-warning mx-1">Update</a>
+                  <a href="#" class="btn btn-danger mx-1">Delete</a>
+                </td>
+              </tr>
             </tbody>
           </table>
           <nav aria-label="Page navigation example">
