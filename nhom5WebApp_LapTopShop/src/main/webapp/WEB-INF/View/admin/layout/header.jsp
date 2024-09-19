@@ -6,7 +6,9 @@
     </div>
     <div class="uses">
         <div>Welcom</div>
-        <div class="usert"><i class='bx bxs-user-circle'></i></div>
-        <div  class="down-arrow"><i class='bx bxs-down-arrow'></i></div>
+        <div class="usert">
+            <i class='bx bxs-user-circle'></i>
+        </div>
+        
     </div>
 </header>
