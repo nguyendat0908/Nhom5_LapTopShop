@@ -25,16 +25,16 @@ pageEncoding="UTF-8"%>
           <li class="breadcrumb-item active" aria-current="page">
             <a href="#">Dashboard</a>
           </li>
-          <li class="breadcrumb-item active" aria-current="page">Product</li>
+          <li class="breadcrumb-item active" aria-current="page">User</li>
         </ol>
-        <div style="width: 800px" class="container-delete-product">
+        <div style="width: 800px" class="container-delete-user">
            
             <div class="h4 pb-2 mb-4 border-bottom ">
-                Delete product with ID : 1
+                Delete user with ID : 5
               </div>
             
             <div class="row">
-                <div style="border-radius: 20px;" class="p-3 mb-2 bg-danger-subtle text-danger-emphasis">Are you sure to delete this product?</div>
+                <div style="border-radius: 20px;" class="p-3 mb-2 bg-danger-subtle text-danger-emphasis">Are you sure to delete this user?</div>
             </div>
             <div>
                 <button type="button" class="btn btn-danger">confirm</button>

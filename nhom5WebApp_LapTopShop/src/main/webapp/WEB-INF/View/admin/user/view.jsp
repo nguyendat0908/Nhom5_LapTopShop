@@ -33,7 +33,10 @@ pageEncoding="UTF-8"%>
       </div>
 
       <div class="container-view-user">
-        <h4>User detail with ID: 5</h4>
+        <div class="h4 pb-2 mb-3 border-bottom ">
+          User detail with ID: 5
+        </div>
+        
         <ul class="list-group">
             <li class="list-group-item list-group-item-dark">User Infomation</li>
             <li class="list-group-item">ID : 5</li>
@@ -43,7 +46,7 @@ pageEncoding="UTF-8"%>
             <li class="list-group-item">Adress :</li>
             <li class="list-group-item">Avatar : </li>            
         </ul>
-      <div>
+      <div style="padding-top: 10px;">
         <button type="button" class="btn btn-success">Back</button>
       </div>
         
