@@ -24,8 +24,9 @@
           <li class="breadcrumb-item active" aria-current="page">
             <a href="#">Order</a>
           </li>
-          <li class="breadcrumb-item" aria-current="page">Update</li>
+          <li class="breadcrumb-item" aria-current="page">Delete</li>
         </ol>
+<<<<<<< HEAD
         <div class="mt-5 mx-auto" style="width: 60%">
           <h3 class="border-bottom pb-3">Update a order</h3>
           <div class="d-flex">
@@ -48,10 +49,21 @@
               </div>
               <button type="submit" class="btn btn-warning mt-4">Update</button>
             </form>
+=======
+        <div class="mt-5 mx-auto">
+          <h3 class="border-bottom pb-3">Delete the order with ID = <span>1</span></h3>
+          <div class="bg-danger bg-opacity-25 text-danger p-3 rounded-2">
+            Are you sure to delete this order?
+>>>>>>> origin/order-VH
           </div>
+          <a href="#" class="btn btn-danger mt-4">Comfirm</a>
         </div>
+<<<<<<< HEAD
       </div>
       <!-- <jsp:include page="../layout/footer.jsp" /> -->
+=======
+        <!-- <jsp:include page="../layout/footer.jsp" /> -->
+>>>>>>> origin/order-VH
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
