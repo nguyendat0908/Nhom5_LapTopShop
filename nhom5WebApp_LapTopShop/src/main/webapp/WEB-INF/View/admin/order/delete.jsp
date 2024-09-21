@@ -38,6 +38,7 @@
             <span class="fw-bold">Order id = <span>4</span></span>
             <span class="mx-5 fw-bold">Price: <span>48K</span></span>
           </div>
+<<<<<<< HEAD
           <div class="mt-4">
             <form action="">
               <div class="d-flex justify-content-between">
@@ -60,6 +61,9 @@
           <a href="#" class="btn btn-danger mt-4chec">Comfirm</a>
 =======
           <a href="#" class="btn btn-danger mt-4">Comfirm</a>
+>>>>>>> origin/order-VH
+=======
+          <a href="#" class="btn btn-danger mt-4">Confirm</a>
 >>>>>>> origin/order-VH
         </div>
 <<<<<<< HEAD
