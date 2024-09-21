@@ -52,18 +52,13 @@ body {
 .mi {
   padding: 20px;
 }
-<<<<<<< HEAD
-=======
 .nav-sidebar:hover {
   background-color: #4e4e4e;
 }
->>>>>>> order-VH
 .sidebar ul {
   list-style-type: none;
   padding: 0;
 }
-<<<<<<< HEAD
-=======
 
 .nav-sidebar {
   cursor: pointer;
@@ -71,7 +66,6 @@ body {
 .nav-sidebar:active {
   background-color: #000;
 }
->>>>>>> order-VH
 .sidebar ul li i {
   padding-right: 5px;
   font-size: 15px;
