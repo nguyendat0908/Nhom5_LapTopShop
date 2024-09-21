@@ -31,7 +31,7 @@
           <div class="bg-danger bg-opacity-25 text-danger p-3 rounded-2">
             Are you sure to delete this order?
           </div>
-          <a href="#" class="btn btn-danger mt-4">Comfirm</a>
+          <a href="#" class="btn btn-danger mt-4">Confirm</a>
         </div>
         <!-- <jsp:include page="../layout/footer.jsp" /> -->
     </main>
