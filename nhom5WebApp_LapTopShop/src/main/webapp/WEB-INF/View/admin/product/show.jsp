@@ -1,0 +1,129 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css">
+    <link
+      rel="stylesheet"
+      href="http://localhost:8080/Nhom5_LapTopShop/nhom5WebApp_LapTopShop/src/main/webapp/resources/css/styles.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <jsp:include page="../layout/header.jsp" />
+    <jsp:include page="../layout/sidebar.jsp" />
+    <main class="content">
+      <div class="container-fluid px-4">
+        <h1>Product</h1>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item active" aria-current="page">
+            <a href="#">Dashboard</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">Product</li>
+        </ol>
+        <div class="mt-5">
+          <table class="table table-bordered align-middle text-center">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Factory</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Laptop Asus TUF Gamming </td>
+                <td>17.490.000 đ</td>
+                <td>ASUS</td>
+                <td>
+                  <a href="#" class="btn btn-success mx-1">View</a>
+                  <a href="#" class="btn btn-warning mx-1">Update</a>
+                  <a href="#" class="btn btn-danger mx-1">Delete</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Laptop Dell Inspirion 15</td>
+                <td>15.490.000đ</td>
+                <td>DELL</td>
+                <td>
+                  <a href="#" class="btn btn-success mx-1">View</a>
+                  <a href="#" class="btn btn-warning mx-1">Update</a>
+                  <a href="#" class="btn btn-danger mx-1">Delete</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                 <td>Lenovo IdeaPad Gamming 3</td>
+                 <td>19.500.000đ</td>
+                 <td>LENOVO</td>
+                <td>
+                  <a href="#" class="btn btn-success mx-1">View</a>
+                  <a href="#" class="btn btn-warning mx-1">Update</a>
+                  <a href="#" class="btn btn-danger mx-1">Delete</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Asus K501UX</td>
+                <td>11.900.000đ</td>
+                <td>ASUS</td>
+                <td>
+                  <a href="#" class="btn btn-success mx-1">View</a>
+                  <a href="#" class="btn btn-warning mx-1">Update</a>
+                  <a href="#" class="btn btn-danger mx-1">Delete</a>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>Macbook Air 13</td>
+                <td>17.690.000đ</td>
+                <td>APPLE</td>
+                <td>
+                  <a href="#" class="btn btn-success mx-1">View</a>
+                  <a href="#" class="btn btn-warning mx-1">Update</a>
+                  <a href="#" class="btn btn-danger mx-1">Delete</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <nav aria-label="Page navigation example">
+            <ul class="pagination mt-5 justify-content-center">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
