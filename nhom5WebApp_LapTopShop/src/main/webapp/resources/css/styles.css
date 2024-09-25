@@ -23,6 +23,11 @@ body {
   align-items: center;
 }
 
+.usert {
+  font-size: 30px;
+  margin-left: 8px;
+}
+
 .h_menu {
   margin-left: 100px;
 }
@@ -67,11 +72,11 @@ body {
 }
 .sidebar ul li a {
   text-decoration: none;
-  color: rgb(189, 189, 189);
+  color: rgb(172, 181, 189);
 }
 .sidebar ul:nth-child(1) {
   font-size: 16px;
-  color: rgb(143, 143, 143);
+  color: rgb(103, 112, 112);
 }
 .th {
   background-color: rgb(190, 184, 184);
@@ -87,11 +92,11 @@ body {
   color: rgb(114, 104, 104);
   height: 50px;
   position: absolute;
-  left: 0;
+  left: 12%;
   bottom: 0;
   background: rgb(223, 216, 216);
   align-items: center;
-  width: 100%;
+  width: 88%;
 }
 .ch {
   display: flex;
@@ -103,7 +108,6 @@ body {
   width: 88%;
   margin-left: 12%;
   padding-top: 60px;
-  position: relative;
   padding-bottom: 60px;
 }
 
