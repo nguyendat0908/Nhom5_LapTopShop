@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+header {
+  height: 50px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 50px;
+  text-decoration: none;
+  padding: 0 80px;
+}
+.t a:first-child {
+  color: rgb(112, 235, 30);
+  font-size: 30px;
+  font-weight: 500;
+}
+.t a:nth-child(2) {
+  margin-left: 80px;
+  color: rgb(71, 243, 14);
+}
+.t a:nth-child(3) {
+  margin-left: 50px;
+  color: silver;
+}
+
+.p {
+  font-size: 30px;
+  color: rgb(69, 149, 16);
+  display: flex;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+}
+i {
+  color: rgb(54, 244, 17);
+  margin: 0 10px;
+}
+.carousel {
+  width: 450px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+}
+.carousel img {
+  height: 300px;
+}
+.banner {
+  background: linear-gradient(
+    109.6deg,
+    rgba(112, 246, 255, 0.33) 11.2%,
+    rgba(221, 108, 241, 0.26) 42%,
+    rgba(229, 106, 253, 0.71) 71.5%,
+    rgb(123, 183, 253) 100.2%
+  );
+  height: 350px;
+}
+.t-banner {
+  margin: 0 130px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.flef-banner p:nth-child(1) {
+  color: rgb(238, 242, 23);
+  font-weight: 700;
+}
+.flef-banner p:nth-child(2) {
+  color: rgb(122, 215, 60);
+  font-weight: 700;
+  font-size: 40px;
+}
+.carousel-inner {
+  border-radius: 10px;
+}
+.box {
+  width: 250px;
+  margin: 10px;
+  padding: 5px 20px;
+  background: rgb(239, 231, 231);
+  text-align: center;
+}
+.box-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgb(239, 166, 7);
+  margin: 15px auto;
+  padding: 20px;
+}
+svg {
+  color: white;
+}
+.feature {
+  margin: 0 50px;
+  display: flex;
+  justify-content: space-between;
+}
+footer {
+  height: 250px;
+  background: #435750;
+  color: white;
+}
+footer h4 {
+  color: rgb(122, 215, 60);
+}
+.list {
+  display: flex;
+  justify-content: space-between;
+}
+.inside-list {
+  margin: 0 50px;
+  padding: 10px;
+}
+.list p {
+  font-weight: lighter;
+}
