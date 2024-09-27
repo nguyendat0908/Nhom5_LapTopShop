@@ -16,8 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const totalPrice = product.querySelector(".total-price");
     total(price, currentQuantity, totalPrice);
     pays.innerText = pay().toLocaleString("en-US");
-    totalPay();
   });
+  totalPay();
+  totalPayCheckout();
 });
 
 products.forEach((product) => {
@@ -38,6 +39,7 @@ products.forEach((product) => {
     total(price, currentQuantity, totalPrice);
     pays.innerText = pay().toLocaleString("en-US");
     totalPay();
+    totalPayCheckout();
   });
 
   btnMinus.addEventListener("click", function () {
@@ -49,6 +51,7 @@ products.forEach((product) => {
       total(price, currentQuantity, totalPrice);
       pays.innerText = pay().toLocaleString("en-US");
       totalPay();
+      totalPayCheckout();
     }
   });
 });
@@ -66,10 +69,22 @@ function pay() {
   });
   return total;
 }
+
 function totalPay() {
   let totalPay = document.querySelector("#total-pay");
   let ship = parseFloat(
     document.querySelector("#ship").innerText.replace(/,/g, "")
   );
   totalPay.innerText = (ship + pay()).toLocaleString("en-US");
+}
+
+function totalPayCheckout() {
+  let totalPayCheckoutValue = document
+    .getElementById("total-pay")
+    .innerText.replace(/,/g, "");
+  document.getElementById("hidden-total-pay").value = totalPayCheckoutValue;
+
+  console.log(
+    "value hidden input:" + document.getElementById("hidden-total-pay").value
+  );
 }
