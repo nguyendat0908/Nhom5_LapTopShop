@@ -2,7 +2,6 @@
     <!DOCTYPE html>
     <html lang="en">
 
-<<<<<<< HEAD
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +11,6 @@
             href="http://localhost:8080/Nhom5_LapTopShop/nhom5WebApp_LapTopShop/src/main/webapp/resources/css/styles.css" />
         <title>Document</title>
     </head>
-=======
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +25,6 @@
         href="http://localhost:8080/Nhom5_LapTopShop/nhom5WebApp_LapTopShop/src/main/webapp/resources/css/styles.css" />
     <title>Document</title>
 </head>
->>>>>>> origin/client-layout-HAN
 
     <body>
         <header></header>
