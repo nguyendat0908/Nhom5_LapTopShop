@@ -63,8 +63,8 @@ pageEncoding="UTF-8"%>
                         <input class="form-control form-control-sm" type="text" placeholder="" aria-label=".form-control-sm example">                                                                                        
                     </div>
               </div>
-          </div>
-          <div class="row">
+            </div>
+            <div class="row">
             <div class="col">
               <label for="exampleFormControlInput1" class="form-label">Factory </label>
               <select class="form-select form-select-sm" aria-label="Small select example">
@@ -97,7 +97,7 @@ pageEncoding="UTF-8"%>
             <div>
                 <button type="button" class="btn btn-success">Create</button>
             </div>
-          </div>
+        </div>
      
     </main>
     <script
