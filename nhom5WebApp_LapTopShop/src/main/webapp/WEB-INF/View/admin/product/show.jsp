@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-pageEncoding="UTF-8"%> <%@ taglib prefix = "c" uri =
-"http://java.sun.com/jsp/jstl/core" %> <%@ taglib prefix = "fmt" uri =
-"http://java.sun.com/jsp/jstl/fmt" %>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="http://localhost:8080/Nhom5_LapTopShop/nhom5WebApp_LapTopShop/src/main/webapp/resources/css/styles.css"
-    />
-=======
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
   <!DOCTYPE html>
   <html lang="en">
@@ -31,7 +8,6 @@ pageEncoding="UTF-8"%> <%@ taglib prefix = "c" uri =
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css">
     <link rel="stylesheet" href="../../../../resources/css/styles.css">
->>>>>>> 162b64088ef45efbe18a919539bdaed349a70a6b
     <title>Document</title>
   </head>
 
@@ -59,7 +35,6 @@ pageEncoding="UTF-8"%> <%@ taglib prefix = "c" uri =
               </tr>
             </thead>
             <tbody>
-<<<<<<< HEAD
               <c:forEach var="product" items="${products}">
                 <tr>
                   <th>${product.id}</th>
@@ -76,63 +51,6 @@ pageEncoding="UTF-8"%> <%@ taglib prefix = "c" uri =
                   </td>
                 </tr>
               </c:forEach>
-=======
-              <tr>
-                <th scope="row">1</th>
-                <td>Laptop Asus TUF Gamming </td>
-                <td>17.490.000 đ</td>
-                <td>ASUS</td>
-                <td>
-                  <a href="#" class="btn btn-success mx-1">View</a>
-                  <a href="#" class="btn btn-warning mx-1">Update</a>
-                  <a href="#" class="btn btn-danger mx-1">Delete</a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Laptop Dell Inspirion 15</td>
-                <td>15.490.000đ</td>
-                <td>DELL</td>
-                <td>
-                  <a href="#" class="btn btn-success mx-1">View</a>
-                  <a href="#" class="btn btn-warning mx-1">Update</a>
-                  <a href="#" class="btn btn-danger mx-1">Delete</a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Lenovo IdeaPad Gamming 3</td>
-                <td>19.500.000đ</td>
-                <td>LENOVO</td>
-                <td>
-                  <a href="#" class="btn btn-success mx-1">View</a>
-                  <a href="#" class="btn btn-warning mx-1">Update</a>
-                  <a href="#" class="btn btn-danger mx-1">Delete</a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-                <td>Asus K501UX</td>
-                <td>11.900.000đ</td>
-                <td>ASUS</td>
-                <td>
-                  <a href="#" class="btn btn-success mx-1">View</a>
-                  <a href="#" class="btn btn-warning mx-1">Update</a>
-                  <a href="#" class="btn btn-danger mx-1">Delete</a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">5</th>
-                <td>Macbook Air 13</td>
-                <td>17.690.000đ</td>
-                <td>APPLE</td>
-                <td>
-                  <a href="#" class="btn btn-success mx-1">View</a>
-                  <a href="#" class="btn btn-warning mx-1">Update</a>
-                  <a href="#" class="btn btn-danger mx-1">Delete</a>
-                </td>
-              </tr>
->>>>>>> 162b64088ef45efbe18a919539bdaed349a70a6b
             </tbody>
           </table>
           <nav aria-label="Page navigation example">
@@ -156,10 +74,6 @@ pageEncoding="UTF-8"%> <%@ taglib prefix = "c" uri =
           </nav>
         </div>
       </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> 162b64088ef45efbe18a919539bdaed349a70a6b
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

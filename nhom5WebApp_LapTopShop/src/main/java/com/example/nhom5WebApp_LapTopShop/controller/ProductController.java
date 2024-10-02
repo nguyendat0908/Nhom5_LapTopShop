@@ -29,12 +29,6 @@ public class ProductController {
     public ProductController(ProductService productService){
         this.productService = productService;
     }
-
-    // Hiển thị trang test demo
-    // @GetMapping("/admin/order")
-    // public String getTestAPI() {
-    //     return "admin/user/show";
-    // }
     
 
     // Trang tạo sản phẩm
@@ -73,7 +67,7 @@ public class ProductController {
     // Trang cập nhật sản phẩm
     @GetMapping("/admin/product/update")
     public String getUpdateProductPage(Model model) {
-        return new String();
+        return "admin/product/update";
     }
     
     
