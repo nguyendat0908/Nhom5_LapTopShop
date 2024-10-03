@@ -18,36 +18,40 @@
       <div class="container-fluid px-4">
         <h1>Product</h1>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item active" aria-current="page">
-            <a href="#">Dashboard</a>
+          <li class="breadcrumb-item" aria-current="page">
+            <a href="/admin">Dashboard</a>
           </li>
-          <li class="breadcrumb-item active" aria-current="page">Product</li>
+          <li class="breadcrumb-item" aria-current="page">
+            <a href="/admin/product">Products</a>
+          </li>
+          <li class="breadcrumb-item active">Create product</li>
         </ol>
         <div class="container-create-product">
           <h4>Create a product</h4>
-          <form action="">
+          <hr/>
+          <form:form method="post" action="/admin/product/create" modelAttribute="newProduct" enctype="multipart/form-data">
             <div class="row mt-3">
               <div class="col">
                 <div class="form">
                   <label for="exampleFormControlInput1" class="form-label">Name</label>
-                  <input class="form-control form-control-sm" id="product-name" type="text" placeholder=""
-                    aria-label=".form-control-sm example">
+                  <form:input class="form-control form-control-sm" id="product-name" type="text"
+                    aria-label=".form-control-sm example" path="name"/>
                   <span></span>
                 </div>
               </div>
               <div class="col">
                 <div class="form">
                   <label for="exampleFormControlInput1" class="form-label">Price</label>
-                  <input class="form-control form-control-sm" id="product-price" type="number" placeholder=""
-                    aria-label=".form-control-sm example">
+                  <form:input class="form-control form-control-sm" id="product-price" type="number"
+                    aria-label=".form-control-sm example" path="price"/>
                   <span></span>
                 </div>
               </div>
             </div>
             <div class="row mt-3">
               <div class="mb-3">
-                <label for="product-detail" class="form-label">Detail descreption</label>
-                <textarea class="form-control form-control-sm" id="product-detail" rows="3"></textarea>
+                <label for="product-detail" class="form-label">Detail description</label>
+                <form:textarea class="form-control form-control-sm" id="product-detail" rows="3" path="detailDesc"/>
                 <span></span>
               </div>
             </div>
@@ -55,16 +59,16 @@
               <div class="col">
                 <div class="form">
                   <label for="exampleFormControlInput1" class="form-label">Short description</label>
-                  <input class="form-control form-control-sm" id="product-short" type="text" placeholder=""
-                    aria-label=".form-control-sm example">
+                  <form:input class="form-control form-control-sm" id="product-short" type="text"
+                    aria-label=".form-control-sm example" path="shortDesc"/>
                   <span></span>
                 </div>
               </div>
               <div class="col">
                 <div class="form">
                   <label for="exampleFormControlInput1" class="form-label">Quantity</label>
-                  <input class="form-control form-control-sm" id="product-quantity" type="number" placeholder=""
-                    aria-label=".form-control-sm example">
+                  <form:input class="form-control form-control-sm" id="product-quantity" type="number"
+                    aria-label=".form-control-sm example" path="quantity"/>
                   <span></span>
                 </div>
               </div>
@@ -72,29 +76,34 @@
             <div class="row mt-3">
               <div class="col">
                 <label for="exampleFormControlInput1" class="form-label">Factory </label>
-                <select class="form-select form-select-sm" id="product-factory" aria-label="Small select example">
-                  <option disabled selected>Open this select menu</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
+                <form:select class="form-select form-select-sm" id="product-factory" aria-label="Small select example" path="factory">
+                  <form:option disabled selected>Open this select menu</form:option>
+                  <form:option value="APPLE">Apple (Macbook)</form:option>
+                  <form:option value="ASUS">Asus</form:option>
+                  <form:option value="LENOVO">Lenovo</form:option>
+                  <form:option value="DELL">Dell</form:option>
+                  <form:option value="LG">LG</form:option>
+                  <form:option value="ACER">Acer</form:option>
+                </form:select>
                 <span></span>
               </div>
               <div class="col">
                 <label for="exampleFormControlInput1" class="form-label">Target</label>
-                <select class="form-select form-select-sm" id="product-target" aria-label="Small select example">
-                  <option disabled selected>Open this select menu</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
+                <form:select class="form-select form-select-sm" id="product-target" aria-label="Small select example" path="target">
+                  <form:option disabled selected>Open this select menu</form:option>
+                  <form:option value="GAMING">Gaming</form:option>
+                  <form:option value="SINHVIEN-VANPHONG">Sinh viên - Văn phòng</form:option>
+                  <form:option value="THIET-KE-DO-HOA">Thiết kế đồ họa</form:option>
+                  <form:option value="MONG-NHE">Mỏng nhẹ</form:option>
+                  <form:option value="DOANH-NHAN">Doanh nhân</form:option>
+                </form:select>
                 <span></span>
               </div>
             </div>
             <div class="row mt-3">
               <div class="col">
-                <label for="formFileSm" class="form-label">Image</label>
-                <input class="form-control form-control-sm" id="formFileSm" type="file">
+                <label for="formFileSm" class="form-label">Image:</label>
+                <input class="form-control form-control-sm" id="formFileSm" type="file" accept=".png, .jpg, .jpeg" name="uploadFile"/>
                 <span></span>
               </div>
               <div class="mt-4">

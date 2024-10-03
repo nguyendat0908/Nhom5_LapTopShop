@@ -5,24 +5,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<<<<<<< HEAD
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="http://localhost:8080/Nhom5_LapTopShop/nhom5WebApp_LapTopShop/src/main/webapp/resources/css/styles.css"
-    />
-=======
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css">
     <link rel="stylesheet" href="../../../../resources/css/styles.css">
->>>>>>> 162b64088ef45efbe18a919539bdaed349a70a6b
     <title>Document</title>
   </head>
 
@@ -39,13 +24,9 @@
           <li class="breadcrumb-item active" aria-current="page">
             <a href="/admin/product">Product</a>
           </li>
-<<<<<<< HEAD
           <li class="breadcrumb-item active" aria-current="page">
             View detail product
           </li>
-=======
-          <li class="breadcrumb-item active" aria-current="page">view detail product</li>
->>>>>>> 162b64088ef45efbe18a919539bdaed349a70a6b
         </ol>
       </div>
 
@@ -56,7 +37,6 @@
 
         <ul class="list-group">
           <li class="list-group-item">
-<<<<<<< HEAD
             <img
               style="width: 300px"
               src="https://deviet.vn/wp-content/uploads/2019/04/vuong-quoc-anh.jpg"
@@ -79,26 +59,6 @@
         </ul>
         <a href="/admin/product" class="btn btn-success mt-3">Back</a>
       </div>
-=======
-            <img style="width: 300px" src="https://deviet.vn/wp-content/uploads/2019/04/vuong-quoc-anh.jpg"
-              class="img-thumbnail" alt="...">
-          </li>
-
-          <li class="list-group-item list-group-item-dark">User Infomation</li>
-          <li class="list-group-item">ID : 5</li>
-          <li class="list-group-item">Nmae : Laptop ASUS TUF Gamming</li>
-          <li class="list-group-item">Price : 17.490.000đ</li>
-          <li class="list-group-item">Factory : ASUS</li>
-          <li class="list-group-item">Target : GAMMING</li>
-
-        </ul>
-        <div style="padding-top: 10px;">
-          <button type="button" class="btn btn-success">Back</button>
-        </div>
-
-      </div>
-
->>>>>>> 162b64088ef45efbe18a919539bdaed349a70a6b
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
