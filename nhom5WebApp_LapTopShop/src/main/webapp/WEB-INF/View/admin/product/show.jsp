@@ -35,61 +35,22 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Laptop Asus TUF Gamming </td>
-                <td>17.490.000 đ</td>
-                <td>ASUS</td>
-                <td>
-                  <a href="#" class="btn btn-success mx-1">View</a>
-                  <a href="#" class="btn btn-warning mx-1">Update</a>
-                  <a href="#" class="btn btn-danger mx-1">Delete</a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Laptop Dell Inspirion 15</td>
-                <td>15.490.000đ</td>
-                <td>DELL</td>
-                <td>
-                  <a href="#" class="btn btn-success mx-1">View</a>
-                  <a href="#" class="btn btn-warning mx-1">Update</a>
-                  <a href="#" class="btn btn-danger mx-1">Delete</a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Lenovo IdeaPad Gamming 3</td>
-                <td>19.500.000đ</td>
-                <td>LENOVO</td>
-                <td>
-                  <a href="#" class="btn btn-success mx-1">View</a>
-                  <a href="#" class="btn btn-warning mx-1">Update</a>
-                  <a href="#" class="btn btn-danger mx-1">Delete</a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-                <td>Asus K501UX</td>
-                <td>11.900.000đ</td>
-                <td>ASUS</td>
-                <td>
-                  <a href="#" class="btn btn-success mx-1">View</a>
-                  <a href="#" class="btn btn-warning mx-1">Update</a>
-                  <a href="#" class="btn btn-danger mx-1">Delete</a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">5</th>
-                <td>Macbook Air 13</td>
-                <td>17.690.000đ</td>
-                <td>APPLE</td>
-                <td>
-                  <a href="#" class="btn btn-success mx-1">View</a>
-                  <a href="#" class="btn btn-warning mx-1">Update</a>
-                  <a href="#" class="btn btn-danger mx-1">Delete</a>
-                </td>
-              </tr>
+              <c:forEach var="product" items="${products}">
+                <tr>
+                  <th>${product.id}</th>
+                  <td>${product.name}</td>
+                  <td>
+                    <fmt:formatNumber value = "${product.price}" type = "number"/> 
+                    đ
+                  </td>
+                  <td>${product.factory}</td>
+                  <td>
+                    <a href="#" class="btn btn-success mx-1">View</a>
+                    <a href="#" class="btn btn-warning mx-1">Update</a>
+                    <a href="#" class="btn btn-danger mx-1">Delete</a>
+                  </td>
+                </tr>
+              </c:forEach>
             </tbody>
           </table>
           <nav aria-label="Page navigation example">
@@ -113,7 +74,6 @@
           </nav>
         </div>
       </div>
-
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
