@@ -90,8 +90,7 @@ pageEncoding="UTF-8"%>
             <div class="row">
               <div class="col">                
                   <label for="formFileSm" class="form-label">Small file input example</label>
-                  <input class="form-control form-control-sm" id="formFileSm" type="file">
-                                 
+                  <input class="form-control form-control-sm" id="formFileSm" type="file">                                 
               </div>
               <div class="col">
                 <img style="width: 300px" src="https://deviet.vn/wp-content/uploads/2019/04/vuong-quoc-anh.jpg" class="img-thumbnail" alt="...">
