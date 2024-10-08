@@ -2,10 +2,12 @@ package com.example.nhom5webapp_laptopshop.controller;
 
 import java.util.*;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 
 import com.example.nhom5webapp_laptopshop.domain.Product;
+import com.example.nhom5webapp_laptopshop.service.ImportJSON;
 import com.example.nhom5webapp_laptopshop.service.ProductService;
 import com.example.nhom5webapp_laptopshop.service.UploadService;
 
@@ -15,18 +17,24 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.bind.annotation.RequestBody;
-
 
 @Controller
 public class ProductController {
 
     private final ProductService productService;
     private final UploadService uploadService;
+    private final ImportJSON importJSON;
 
-    public ProductController(ProductService productService, UploadService uploadService) {
+    public ProductController(ProductService productService, UploadService uploadService, ImportJSON importJSON) {
         this.productService = productService;
         this.uploadService = uploadService;
+        this.importJSON = importJSON;
+    }
+
+    // Tải sản phẩm từ JSON
+    @GetMapping("/admin/product/load")
+    public ResponseEntity<String> loadProducts() {
+        return importJSON.loadProductsFromJson();
     }
 
     // Trang tạo sản phẩm
@@ -40,7 +48,7 @@ public class ProductController {
     @PostMapping("/admin/product/create")
     public String createProductPage(@ModelAttribute("newProduct") Product product,
             @RequestParam("uploadFile") MultipartFile file) {
-        
+
         String imgProduct = this.uploadService.handleSaveUploadFile(file, "product");
         product.setImage(imgProduct);
 
@@ -78,12 +86,13 @@ public class ProductController {
 
     // Cập nhật sản phẩm
     @PostMapping("/admin/product/update")
-    public String postUpdateProduct(@ModelAttribute("newProduct") Product product, @RequestParam("uploadFile") MultipartFile file) {
-        
+    public String postUpdateProduct(@ModelAttribute("newProduct") Product product,
+            @RequestParam("uploadFile") MultipartFile file) {
+
         Product currentProduct = this.productService.getProductById(product.getId()).get();
 
         if (currentProduct != null) {
-            
+
             // Cập nhật file mới
             if (!file.isEmpty()) {
                 String img = this.uploadService.handleSaveUploadFile(file, "product");
@@ -103,6 +112,11 @@ public class ProductController {
 
         return "redirect:/admin/product";
     }
-    
+
+    // Xóa sản phẩm
+    @GetMapping("/admin/product/delete")
+    public String getMethodName() {
+        return "admin/product/delete";
+    }
 
 }

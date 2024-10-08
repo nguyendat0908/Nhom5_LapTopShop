@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
     <header class="header">
         <div class="menu">
-            <a class="icon" href="">Laptopshop</a>
+            <a class="icon" href="/admin">Laptopshop</a>
         </div>
         <div class="uses">
             <div>Welcom</div>
