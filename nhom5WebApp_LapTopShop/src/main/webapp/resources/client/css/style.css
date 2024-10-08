@@ -120,7 +120,6 @@ footer h4 {
 .list p {
   font-weight: lighter;
 }
-<<<<<<< HEAD
 /* homepage */
 .product {
   /* box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3); */
@@ -157,7 +156,7 @@ footer h4 {
 }
 .content {
   margin: 80px;
-=======
+}
 .header-cart {
   position: relative;
 }
@@ -235,5 +234,4 @@ footer h4 {
     transform-origin: 90% top;
     opacity: 1;
   }
->>>>>>> 590c2b2da6bf6eeb7f583d0ece61b0063bac517b
 }
