@@ -30,40 +30,43 @@
           <div class="h4 pb-2 mb-2 border-bottom ">
             Create a user
           </div>
-          <div class="row">
-            <form>
-              <div class="form">
-                <label for="exampleInputEmail1" class="form-label">Email</label>
-                <input type="email" class="form-control form-control-sm" id="exampleInputEmail1"
-                  aria-describedby="emailHelp">
+          <form action="">
+                <div class="row">
+                  <div class="form">
+                    <label for="exampleInputEmail1" class="form-label">Email</label>
+                    <input type="email" class="form-control form-control-sm" id="exampleInputEmail1"
+                      aria-describedby="emailHelp">
+                  </div>
               </div>
-          </div>
-          <div class="row">
-            <div class="form">
-              <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
-              <input class="form-control form-control-sm" type="text" placeholder=""
-                aria-label=".form-control-sm example">
+              <div class="row">
+                <div class="form">
+                  <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
+                  <input class="form-control form-control-sm" type="text" placeholder=""
+                    aria-label=".form-control-sm example">
+                </div>
+              </div>
+              <div class="row">
+                <div class="form">
+                  <label for="exampleFormControlInput1" class="form-label">Full name</label>
+                  <input class="form-control form-control-sm" type="text" placeholder=""
+                    aria-label=".form-control-sm example">
+                </div>
+              </div>
+              <div class="row">
+                <div class="form">
+                  <label for="exampleFormControlInput1" class="form-label">Adress</label>
+                  <input class="form-control form-control-sm" type="text" placeholder=""
+                    aria-label=".form-control-sm example">
+                </div>
+              </div>
+              <div style="padding-top: 20px;">
+                <button type="button" class="btn btn-warning">Update</button>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="form">
-              <label for="exampleFormControlInput1" class="form-label">Full name</label>
-              <input class="form-control form-control-sm" type="text" placeholder=""
-                aria-label=".form-control-sm example">
-            </div>
-          </div>
-          <div class="row">
-            <div class="form">
-              <label for="exampleFormControlInput1" class="form-label">Adress</label>
-              <input class="form-control form-control-sm" type="text" placeholder=""
-                aria-label=".form-control-sm example">
-            </div>
-          </div>
-          <div style="padding-top: 20px;">
-            <button type="button" class="btn btn-warning">Warning</button>
-          </div>
-        </div>
 
+          </form>
+
+          
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
