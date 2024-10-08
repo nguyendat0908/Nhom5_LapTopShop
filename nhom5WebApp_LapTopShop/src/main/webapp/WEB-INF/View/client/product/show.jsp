@@ -158,9 +158,9 @@
                                 </div>
                             </div>
                             <button type="button" class="btn btn-outline-success custom-btn">Lọc Sản Phẩm</button>
-                        </div>
+                       
                     </form>
-                    
+                </div>     
                 <div class="client-product-content">
                     <div class="row g-4">
                         <div class="col-md-6 col-lg-5 col-xl-4">
