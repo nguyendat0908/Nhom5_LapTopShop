@@ -1,7 +1,6 @@
 // const btnPlus = document.getElementById("btn-plus");
 // const btnMinus = document.getElementById("btn-minus");
 // const quantity = document.getElementById("quantity");
-
 const products = document.querySelectorAll(".product-item");
 // console.log(products);
 const pays = document.querySelector("#pay");
@@ -19,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   totalPay();
   totalPayCheckout();
+  checkout();
 });
 
 products.forEach((product) => {
@@ -40,6 +40,7 @@ products.forEach((product) => {
     pays.innerText = pay().toLocaleString("en-US");
     totalPay();
     totalPayCheckout();
+    checkout();
   });
 
   btnMinus.addEventListener("click", function () {
@@ -52,6 +53,7 @@ products.forEach((product) => {
       pays.innerText = pay().toLocaleString("en-US");
       totalPay();
       totalPayCheckout();
+      checkout();
     }
   });
 });
@@ -87,4 +89,15 @@ function totalPayCheckout() {
   console.log(
     "value hidden input:" + document.getElementById("hidden-total-pay").value
   );
+}
+function checkout() {
+  const quantityList = document.querySelectorAll(".quantity");
+  quantityList.forEach((quantity, index) => {
+    let quantityValue = quantity.value;
+    localStorage.setItem(`quantity_${index}`, quantityValue);
+    console.log("Đã lưu vào localStorage:");
+  });
+  for (let i = 0; i < quantityList.length; i++) {
+    console.log(`quantity_${i}: ${localStorage.getItem(`quantity_${i}`)}`);
+  }
 }

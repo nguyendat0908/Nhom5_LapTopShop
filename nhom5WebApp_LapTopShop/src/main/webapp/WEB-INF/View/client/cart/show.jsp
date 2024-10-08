@@ -141,7 +141,8 @@
                         <div><span id="total-pay"></span> đ</div>
                     </div>
                     <input type="hidden" id="hidden-total-pay" name="total-pay">
-                    <a href="./checkout.jsp" class="btn btn-warning rounded-pill py-2 px-4 text-white">XÁC NHẬN THANH
+                    <a href="./checkout.jsp" id="confirm-pay"
+                        class="btn btn-warning rounded-pill py-2 px-4 text-white">XÁC NHẬN THANH
                         TOÁN</a>
                 </div>
             </div>
