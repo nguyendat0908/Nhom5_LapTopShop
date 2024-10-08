@@ -8,7 +8,6 @@ import org.springframework.ui.Model;
 import com.example.nhom5webapp_laptopshop.domain.Product;
 import com.example.nhom5webapp_laptopshop.service.ProductService;
 
-
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,13 +15,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class ProductController {
-    
+
     private ProductService productService;
 
-    public ProductController(ProductService productService){
+    public ProductController(ProductService productService) {
         this.productService = productService;
     }
-    
 
     // Trang tạo sản phẩm
     @GetMapping("/admin/product/create")
@@ -38,7 +36,7 @@ public class ProductController {
         this.productService.handleSaveProduct(product);
         return "redirect:admin/product";
     }
-    
+
     // Trang hiển thị danh sách sản phẩm
     @GetMapping("/admin/product")
     public String getProductPage(Model model) {
@@ -62,7 +60,5 @@ public class ProductController {
     public String getUpdateProductPage(Model model) {
         return "admin/product/update";
     }
-    
-    
-    
+
 }

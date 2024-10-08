@@ -12,9 +12,9 @@ import jakarta.persistence.Table;
 import java.util.*;
 
 @Entity
-@Table(name="orders")
+@Table(name = "orders")
 public class Order {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -53,7 +53,7 @@ public class Order {
     public void setStatus(String status) {
         this.status = status;
     }
-    
+
     public User getUser() {
         return user;
     }

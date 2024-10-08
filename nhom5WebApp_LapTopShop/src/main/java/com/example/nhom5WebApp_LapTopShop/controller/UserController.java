@@ -10,17 +10,15 @@ import com.example.nhom5webapp_laptopshop.service.UserService;
 
 import org.springframework.web.bind.annotation.PostMapping;
 
-
-
 @Controller
 public class UserController {
 
     private UserService userService;
 
-    public UserController(UserService userService){
+    public UserController(UserService userService) {
         this.userService = userService;
     }
-    
+
     // Lấy trang tạo mới user
     @GetMapping("/admin/user/create")
     public String getCreateUserPage(Model model) {
@@ -34,6 +32,5 @@ public class UserController {
         this.userService.handleSaveUser(user);
         return "redirect:admin/user";
     }
-    
-    
+
 }

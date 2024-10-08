@@ -14,7 +14,7 @@ import java.util.*;
 @Entity
 @Table(name = "carts")
 public class Cart {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
