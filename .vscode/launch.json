@@ -9,6 +9,16 @@
             "projectName": "nhom5WebApp_LapTopShop",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-Nhom5WebAppLapTopShopApplication<nhom5WebApp_LapTopShop>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.nhom5webapp_laptopshop.Nhom5WebAppLapTopShopApplication",
+            "projectName": "nhom5WebApp_LapTopShop",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }
