@@ -2,19 +2,19 @@
 pageEncoding="UTF-8"%>
 <nav class="sidebar">
   <ul>
-    <li class="mi">FEATURES</li>
+    <li class="mi">Tính năng</li>
     <li class="mi nav-sidebar">
-      <a href=""><i class="bx bx-globe"></i>Dashboard</a>
+      <a href=""><i class="bx bx-globe"></i>Bảng điều khiển</a>
     </li>
     <li class="mi nav-sidebar">
-      <a href=""><i class="bx bx-globe"></i>User</a>
+      <a href=""><i class="bx bx-globe"></i>Người dùng</a>
     </li>
     <li class="mi nav-sidebar">
-      <a href=""><i class="bx bx-globe"></i>Product</a>
+      <a href=""><i class="bx bx-globe"></i>Sản phẩm</a>
     </li>
     <li class="mi nav-sidebar">
-      <a href=""><i class="bx bx-globe"></i>Order</a>
+      <a href=""><i class="bx bx-globe"></i>Đặt hàng</a>
     </li>
   </ul>
-  <p class="th">Logged in as: <br />DatLeo</p>
+  <p class="th">Đã đăng nhập bởi: <br />DatLeo</p>
 </nav>

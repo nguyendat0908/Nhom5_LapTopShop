@@ -1,5 +1,6 @@
 package com.example.nhom5webapp_laptopshop.domain;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -17,7 +18,10 @@ public class Product {
     private String name;
     private String price;
     private String image;
+    
+    @Column(columnDefinition = "TEXT")
     private String detailDesc;
+
     private String shortDesc;
     private long quantity;
     private long sold;

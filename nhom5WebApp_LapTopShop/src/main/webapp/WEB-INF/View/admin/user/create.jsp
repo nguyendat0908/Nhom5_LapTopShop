@@ -77,12 +77,11 @@
             </div>
             <div style="padding-bottom: 10px;" class="row">
               <div class="col">
-                <label for="exampleFormControlInput1" class="form-label">Roll </label>
+                <label for="exampleFormControlInput1" class="form-label">Role: </label>
                 <select class="form-select form-select-sm" aria-label="Small select example">
                   <option selected>Open this select menu</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
+                  <option value="ADMIN">ADMIN</option>
+                  <option value="USER">USER</option>
                 </select>
               </div>
               <div class="col">
