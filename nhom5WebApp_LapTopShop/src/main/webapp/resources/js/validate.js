@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const submit = document.getElementById("submit-form");
+  const submit = document.getElementById("create-form");
   const productName = document.getElementById("product-name");
   const productPrice = document.getElementById("product-price");
   const detail = document.getElementById("product-detail");
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const target = document.getElementById("product-target");
   const image = document.getElementById("formFileSm");
 
-  submit.addEventListener("click", function (e) {
+  submit.addEventListener("submit", function (e) {
     e.preventDefault();
 
     let isValid = true;
