@@ -89,6 +89,14 @@ function totalPayCheckout() {
   console.log(
     "value hidden input:" + document.getElementById("hidden-total-pay").value
   );
+  let payCheckoutValue = document
+    .getElementById("pay")
+    .innerText.replace(/,/g, "");
+  document.getElementById("hidden-pay").value = payCheckoutValue;
+  let shipCheckoutValue = document
+    .getElementById("ship")
+    .innerText.replace(/,/g, "");
+  document.getElementById("hidden-ship").value = shipCheckoutValue;
 }
 function checkout() {
   const quantityList = document.querySelectorAll(".quantity");

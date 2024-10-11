@@ -132,19 +132,19 @@
                             <div class="form-checkout mt-4">
                                 <label for="consignee-name" class="text-secondary mb-1">Tên người nhận</label>
                                 <input id="consignee-name" name="consignee-name" class="form-control" type="text"
-                                    placeholder="Nhập tên">
+                                    placeholder="Nhập tên" required>
                                 <span></span>
                             </div>
                             <div class="form-checkout mt-4">
                                 <label for="consignee-addr" class="text-secondary mb-1">Địa chỉ người nhận</label>
                                 <input id="consignee-addr" name="consignee-addr" class="form-control" type="text"
-                                    placeholder="Nhập địa chỉ">
+                                    placeholder="Nhập địa chỉ" required>
                                 <span></span>
                             </div>
                             <div class="form-checkout mt-4">
                                 <label for="consignee-phone" class="text-secondary mb-1">Số điện thoại</label>
-                                <input id="consignee-phone" name="consignee-phone" class="form-control" type="text"
-                                    placeholder="Nhập SĐT">
+                                <input id="consignee-phone  name=" consignee-phone" class="form-control" type="text"
+                                    placeholder="Nhập SĐT" required>
                                 <span></span>
                             </div>
                             <a href="./show.jsp" class="text-color-primary d-flex  align-items-center mt-5"><i
@@ -156,16 +156,19 @@
                             <div class="d-flex justify-content-between mt-4">
                                 <span>Tạm tính:</span>
                                 <div><span id="pay"></span> đ</div>
+                                <input type="hidden" id="hidden-pay" name="pay">
                             </div>
+
                             <div class="border-bottom d-flex justify-content-between mt-4">
                                 <span>Phí vận chuyển:</span>
                                 <div><span id="ship">100,000</span> đ</div>
+                                <input type="hidden" id="hidden-ship" name="ship">
                             </div>
                             <div class="d-flex justify-content-between mt-4 mb-5">
                                 <span>Tổng số tiền:</span>
                                 <div><span id="total-pay"></span> đ</div>
+                                <input type="hidden" id="hidden-total-pay" name="totalPay">
                             </div>
-                            <input type="hidden" id="hidden-total-pay" name="total-pay">
                             <button type="submit" id="checkout-form"
                                 class="btn btn-warning rounded-pill py-2 px-4 text-white">XÁC NHẬN
                                 THANH
