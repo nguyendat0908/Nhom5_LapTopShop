@@ -30,20 +30,18 @@
 
       <div class="container-view-user">
         <div class="h4 pb-2 mb-3 border-bottom ">
-          User detail with ID: 5
+          User detail with ID: ${id}
         </div>
 
         <ul class="list-group">
           <li class="list-group-item list-group-item-dark">User Infomation</li>
-          <li class="list-group-item">ID : 5</li>
-          <li class="list-group-item">Email : nguyendat1@gmail.com</li>
-          <li class="list-group-item">Full Name : Nguyen Dat</li>
-          <li class="list-group-item">Roll : User</li>
-          <li class="list-group-item">Adress :</li>
-          <li class="list-group-item">Avatar : </li>
+          <li class="list-group-item">ID : ${user.id}</li>
+          <li class="list-group-item">Email : ${user.email}</li>
+          <li class="list-group-item">Full Name : ${user.fullName}</li>
+          <li class="list-group-item">Adress : ${user.address}</li>
         </ul>
         <div style="padding-top: 10px;">
-          <button type="button" class="btn btn-success">Back</button>
+        <a href="/admin/user"><button type="button" class="btn btn-success">Back</button></a>
         </div>
 
       </div>
