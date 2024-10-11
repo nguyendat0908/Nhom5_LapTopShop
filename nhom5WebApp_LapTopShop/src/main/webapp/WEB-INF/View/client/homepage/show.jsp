@@ -33,9 +33,9 @@
                                     </p>
                                     <p class="fs-7 text-secondary mt-1"><span>i5-10300H</span>, <span>RAM 8GB</span></p>
                                     <p class="mb-0">17.000.000 <span>đ</span></p>
-                                    <a href="#"
+                                    <button
                                         class="btn rounded-pill border border-warning-subtle text-success-emphasis mt-4"><i
-                                            class='bx bxs-shopping-bag'></i>Thêm vào giỏ hàng</a>
+                                            class='bx bxs-shopping-bag'></i>Thêm vào giỏ hàng</button>
                                 </div>
                             </div>
                         </div>
@@ -50,9 +50,9 @@
                                     </p>
                                     <p class="fs-7 text-secondary mt-1"><span>i5-10300H</span>, <span>RAM 8GB</span></p>
                                     <p class="mb-0">17.000.000 <span>đ</span></p>
-                                    <a href="#"
+                                    <button
                                         class="btn rounded-pill border border-warning-subtle text-success-emphasis mt-4"><i
-                                            class='bx bxs-shopping-bag'></i>Thêm vào giỏ hàng</a>
+                                            class='bx bxs-shopping-bag'></i>Thêm vào giỏ hàng</button>
                                 </div>
                             </div>
                         </div>
@@ -67,9 +67,9 @@
                                     </p>
                                     <p class="fs-7 text-secondary mt-1"><span>i5-10300H</span>, <span>RAM 8GB</span></p>
                                     <p class="mb-0">17.000.000 <span>đ</span></p>
-                                    <a href="#"
+                                    <button
                                         class="btn rounded-pill border border-warning-subtle text-success-emphasis mt-4"><i
-                                            class='bx bxs-shopping-bag'></i>Thêm vào giỏ hàng</a>
+                                            class='bx bxs-shopping-bag'></i>Thêm vào giỏ hàng</button>
                                 </div>
                             </div>
                         </div>
@@ -84,9 +84,9 @@
                                     </p>
                                     <p class="fs-7 text-secondary mt-1"><span>i5-10300H</span>, <span>RAM 8GB</span></p>
                                     <p class="mb-0">17.000.000 <span>đ</span></p>
-                                    <a href="#"
+                                    <button
                                         class="btn rounded-pill border border-warning-subtle text-success-emphasis mt-4"><i
-                                            class='bx bxs-shopping-bag'></i>Thêm vào giỏ hàng</a>
+                                            class='bx bxs-shopping-bag'></i>Thêm vào giỏ hàng</button>
                                 </div>
                             </div>
                         </div>
@@ -101,9 +101,9 @@
                                     </p>
                                     <p class="fs-7 text-secondary mt-1"><span>i5-10300H</span>, <span>RAM 8GB</span></p>
                                     <p class="mb-0">17.000.000 <span>đ</span></p>
-                                    <a href="#"
+                                    <button
                                         class="btn rounded-pill border border-warning-subtle text-success-emphasis mt-4"><i
-                                            class='bx bxs-shopping-bag'></i>Thêm vào giỏ hàng</a>
+                                            class='bx bxs-shopping-bag'></i>Thêm vào giỏ hàng</button>
                                 </div>
                             </div>
                         </div>
