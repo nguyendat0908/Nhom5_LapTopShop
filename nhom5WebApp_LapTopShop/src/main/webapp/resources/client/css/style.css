@@ -94,6 +94,7 @@ i {
   padding: 5px 20px;
   background: rgb(239, 231, 231);
   text-align: center;
+  border-radius: 10px;
 }
 .box-icon {
   width: 100px;
@@ -107,7 +108,7 @@ svg {
   color: white;
 }
 .feature {
-  margin: 0 50px;
+  margin: 20px 50px;
   display: flex;
   justify-content: space-between;
 }

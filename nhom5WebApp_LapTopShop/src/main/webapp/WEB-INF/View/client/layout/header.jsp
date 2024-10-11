@@ -2,13 +2,13 @@
     <header>
         <div class="header">
             <div class="t">
-                <a href="">Laptopshop</a>
-                <a href="">Trang chủ</a>
-                <a href="">Sản phẩm</a>
+                <a href="../homepage/show.jsp">Laptopshop</a>
+                <a href="../homepage/show.jsp">Trang chủ</a>
+                <a href="../product/show.jsp">Sản phẩm</a>
             </div>
             <div class="p">
                 <div class="header-cart">
-                    <a href=""><i class='bx bxs-shopping-bag'></i></a>
+                    <a href="../cart/show.jsp"><i class='bx bxs-shopping-bag'></i></a>
                     <span class="header-cart-number">1</span>
                 </div>
                 <div class="header-user">
