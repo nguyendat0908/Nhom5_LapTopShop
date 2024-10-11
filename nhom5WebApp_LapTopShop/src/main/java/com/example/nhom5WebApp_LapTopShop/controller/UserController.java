@@ -33,4 +33,10 @@ public class UserController {
         return "redirect:admin/user";
     }
 
+    @GetMapping("/admin/user/show")
+    public String tCreateUserPage(Model model) {
+        model.addAttribute("newUser", new User());
+        return "admin/user/show";
+    }
+
 }
