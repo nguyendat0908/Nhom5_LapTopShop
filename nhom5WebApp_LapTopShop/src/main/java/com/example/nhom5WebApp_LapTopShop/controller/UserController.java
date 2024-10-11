@@ -1,42 +1,44 @@
 package com.example.nhom5webapp_laptopshop.controller;
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 
 import com.example.nhom5webapp_laptopshop.domain.User;
 import com.example.nhom5webapp_laptopshop.service.UserService;
 
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class UserController {
 
-    private UserService userService;
+    private final UserService userService;
 
     public UserController(UserService userService) {
         this.userService = userService;
     }
 
-    // Lấy trang tạo mới user
-    @GetMapping("/admin/user/create")
+    @RequestMapping("admin/user")
+    public String getUserPage(Model model) {
+        List<User> users = this.userService.getAllUser();
+        model.addAttribute("users1", users);
+        return "admin/user/show";
+    }
+
+    @RequestMapping("admin/user/create")
     public String getCreateUserPage(Model model) {
         model.addAttribute("newUser", new User());
         return "admin/user/create";
     }
 
-    // Lưu người dùng
-    @PostMapping("/admin/user/create")
-    public String postCreateUser(Model model, @ModelAttribute("newUser") User user) {
+    // Lấy dữ liệu từ view-> controller
+    @RequestMapping(value = "/admin/user/create", method = RequestMethod.POST)
+    public String createUserPage(Model model, @ModelAttribute("newUser") User user) {
         this.userService.handleSaveUser(user);
-        return "redirect:admin/user";
-    }
-
-    @GetMapping("/admin/user/show")
-    public String tCreateUserPage(Model model) {
-        model.addAttribute("newUser", new User());
-        return "admin/user/show";
+        return "redirect:/admin/user";
     }
 
 }
