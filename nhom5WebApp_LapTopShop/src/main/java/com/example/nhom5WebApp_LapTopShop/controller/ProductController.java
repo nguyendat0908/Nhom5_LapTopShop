@@ -53,7 +53,7 @@ public class ProductController {
         product.setImage(imgProduct);
 
         this.productService.handleSaveProduct(product);
-        return "redirect:admin/product";
+        return "redirect:/admin/product";
     }
 
     // Trang hiển thị danh sách sản phẩm

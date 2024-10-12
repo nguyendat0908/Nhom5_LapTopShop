@@ -25,7 +25,7 @@ public class UserController {
     @GetMapping("/admin/user/create")
     public String getCreateUserPage(Model model) {
         model.addAttribute("newUser", new User());
-        return "admin/user/create";
+        return "admin/user/view";
     }
 
     // Lưu người dùng

@@ -32,6 +32,11 @@ uri="http://java.sun.com/jsp/jstl/fmt" %>
           <li class="breadcrumb-item active" aria-current="page">Sản phẩm</li>
         </ol>
         <div class="mt-5">
+          <div class="d-flex justify-content-between">
+            <h4>Danh sách sản phẩm</h4>
+            <a href="/admin/product/create" class="btn btn-primary">Tạo mới một sản phẩm</a>
+          </div>
+          <hr />
           <table class="table table-bordered align-middle text-center">
             <thead>
               <tr>
@@ -45,7 +50,7 @@ uri="http://java.sun.com/jsp/jstl/fmt" %>
             <tbody>
               <c:forEach var="product" items="${products}">
                 <tr>
-                  <th>${product.id}</th>
+                  <td>${product.id}</td>
                   <td>${product.name}</td>
                   <td>
                     <fmt:formatNumber value="${product.price}" type="number" />
@@ -53,16 +58,16 @@ uri="http://java.sun.com/jsp/jstl/fmt" %>
                   </td>
                   <td>${product.factory}</td>
                   <td>
-                    <a href="/admin/product/{id}" class="btn btn-success mx-1"
+                    <a href="/admin/product/${product.id}" class="btn btn-success mx-1"
                       >Xem chi tiết</a
                     >
                     <a
-                      href="/admin/product/update/{id}"
+                      href="/admin/product/update/${product.id}"
                       class="btn btn-warning mx-1"
                       >Cập nhật</a
                     >
                     <a
-                      href="/admin/product/delete/{id}"
+                      href="/admin/product/delete/${product.id}"
                       class="btn btn-danger mx-1"
                       >Xóa</a
                     >
