@@ -101,7 +101,7 @@
               </div>
             </div>
             <div style="padding-top: 10px;">
-              <button type="button" class="btn btn-primary" id="submit-form">Tạo mới</button>
+              <button type="submit" class="btn btn-primary" id="submit-form">Tạo mới</button>
             </div>
           </form:form>
           </div>

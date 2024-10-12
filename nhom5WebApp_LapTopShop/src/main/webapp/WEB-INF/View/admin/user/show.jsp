@@ -1,14 +1,21 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-  <!DOCTYPE html>
-  <html lang="en">
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8" %> <%@ taglib prefix="c"
+uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css">
-    <link rel="stylesheet" href="../../../../resources/css/styles.css">
-    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Danh sách người dùng - Quản trị viên</title>
   </head>
 
   <body>
@@ -16,13 +23,20 @@
     <jsp:include page="../layout/sidebar.jsp" />
     <main class="content">
       <div class="container-fluid px-4">
-        <h1>User</h1>
+        <h1>Người dùng</h1>
         <ol class="breadcrumb">
           <li class="breadcrumb-item active" aria-current="page">
-            <a href="#">Dashboard</a>
+            <a href="/admin">Bảng điều khiển</a>
           </li>
-          <li class="breadcrumb-item active" aria-current="page">User</li>
+          <li class="breadcrumb-item active" aria-current="page">Người dùng</li>
         </ol>
+        <div class="d-flex justify-content-between">
+          <h4>Danh sách người dùng</h4>
+          <a href="/admin/user/create" class="btn btn-primary"
+            >Tạo mới một người dùng</a
+          >
+        </div>
+        <hr />
         <div class="mt-5">
           <table class="table table-bordered align-middle text-center">
             <thead>
@@ -90,7 +104,6 @@
                   <a href="#" class="btn btn-danger mx-1">Delete</a>
                 </td>
               </tr>
-
             </tbody>
           </table>
           <nav aria-label="Page navigation example">
@@ -114,11 +127,11 @@
           </nav>
         </div>
       </div>
-
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"
+    ></script>
   </body>
-
-  </html>
+</html>
