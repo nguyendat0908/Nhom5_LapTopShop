@@ -24,49 +24,52 @@
           <a href="#">User</a>
           <li class="breadcrumb-item active" aria-current="page"></li>
           </li>
-          <li class="breadcrumb-item active" aria-current="page">Create user</li>
+          <li class="breadcrumb-item active" aria-current="page">Create User</li>
         </ol>
         <div class="container-update-user">
           <div class="h4 pb-2 mb-2 border-bottom ">
-            Create a user
+            Update a user
           </div>
-          <form action="">
-                <div class="row">
-                  <div class="form">
-                    <label for="exampleInputEmail1" class="form-label">Email</label>
-                    <input type="email" class="form-control form-control-sm" id="exampleInputEmail1"
-                      aria-describedby="emailHelp">
-                  </div>
-              </div>
-              <div class="row">
-                <div class="form">
-                  <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
-                  <input class="form-control form-control-sm" type="text" placeholder=""
-                    aria-label=".form-control-sm example">
-                </div>
-              </div>
-              <div class="row">
-                <div class="form">
-                  <label for="exampleFormControlInput1" class="form-label">Full name</label>
-                  <input class="form-control form-control-sm" type="text" placeholder=""
-                    aria-label=".form-control-sm example">
-                </div>
-              </div>
-              <div class="row">
-                <div class="form">
-                  <label for="exampleFormControlInput1" class="form-label">Adress</label>
-                  <input class="form-control form-control-sm" type="text" placeholder=""
-                    aria-label=".form-control-sm example">
-                </div>
-              </div>
-              <div style="padding-top: 20px;">
-                <button type="button" class="btn btn-warning">Update</button>
+
+          <form:form method="post" action="/admin/user/update" modelAttribute="newUser">
+
+            <div class="row">
+              <div class="form">
+                <label for="exampleInputEmail1" class="form-label">Email</label>
+                <form:input type="email" class="form-control form-control-sm" id="exampleInputEmail1"
+                  aria-describedby="emailHelp" path="email" />
               </div>
             </div>
+            <!-- <div class="row"> -->
+            <div class="form">
+              <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
+              <form:input class="form-control form-control-sm" type="text" placeholder=""
+                aria-label=".form-control-sm example" path="phone" />
+              <!-- </div> -->
+            </div>
+            <!-- <div class="row"> -->
+            <div class="form">
+              <label for="exampleFormControlInput1" class="form-label">Full name</label>
+              <form:input class="form-control form-control-sm" type="text" placeholder=""
+                aria-label=".form-control-sm example" path="fullName" />
+              <!-- </div> -->
+            </div>
+            <!-- <div class="row"> -->
+            <div class="form">
+              <label for="exampleFormControlInput1" class="form-label">Adress</label>
+              <form:input class="form-control form-control-sm" type="text" placeholder=""
+                aria-label=".form-control-sm example" path="address" />
+              <!-- </div> -->
+            </div>
+            <div style="padding-top: 20px;">
+              <button type="submit" class="btn btn-warning">Update</button>
+            </div>
+        </div>
 
-          </form>
 
-          
+        </form:form>
+
+      </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
