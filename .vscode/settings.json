@@ -1,5 +1,5 @@
 {
   "java.compile.nullAnalysis.mode": "disabled",
-  "java.configuration.updateBuildConfiguration": "interactive",
-  "CodeGPT.apiKey": "CodeGPT Plus Beta"
+  "java.configuration.updateBuildConfiguration": "disabled"
 }
+
