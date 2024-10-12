@@ -48,7 +48,7 @@ prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
           <li class="list-group-item">
             <img
               style="width: 300px"
-              src="https://deviet.vn/wp-content/uploads/2019/04/vuong-quoc-anh.jpg"
+              src="/images/product/${product.image}"
               class="img-thumbnail"
               alt="..."
             />

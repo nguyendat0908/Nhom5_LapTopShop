@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const submit = document.getElementById("submit-form");
+  const submitButton = document.getElementById("submit-form");
+  const form = document.querySelector("form");
   const productName = document.getElementById("product-name");
   const productPrice = document.getElementById("product-price");
   const detail = document.getElementById("product-detail");
@@ -9,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const target = document.getElementById("product-target");
   const image = document.getElementById("formFileSm");
 
-  submit.addEventListener("click", function (e) {
+  submitButton.addEventListener("click", function (e) {
     e.preventDefault();
 
     let isValid = true;
@@ -22,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     isValid = checkSelect(target) && isValid;
     isValid = checkImage(image) && isValid;
     if (isValid) {
-      submit.submit();
+      form.submit();
     }
   });
 
