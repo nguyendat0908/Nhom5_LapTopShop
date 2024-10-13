@@ -2,6 +2,9 @@ package com.example.nhom5webapp_laptopshop.controller;
 
 import java.util.*;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -58,9 +61,29 @@ public class ProductController {
 
     // Trang hiển thị danh sách sản phẩm
     @GetMapping("/admin/product")
-    public String getProductPage(Model model, @RequestParam("page") long page) {
+    public String getProductPage(Model model, @RequestParam("page") Optional<String> pageOptional) {
 
-        List<Product> listProducts = this.productService.getAllProducts();
+        // Không truyền gì thì mặc định page = 1
+        int page = 1;
+        try {
+            if (pageOptional.isPresent()) {
+                // Convert String to int
+                page = Integer.parseInt(pageOptional.get());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        // Tại database: offset + limit
+        Pageable pageable = PageRequest.of(page - 1, 10);
+
+        Page<Product> prs = this.productService.getAllProducts(pageable);
+        // Convert sang list
+        List<Product> listProducts = prs.getContent();
+
+        // Truyền ra view
+        model.addAttribute("currentPage", page);
+        model.addAttribute("totalPage", prs.getTotalPages());
         model.addAttribute("products", listProducts);
 
         return "admin/product/show";

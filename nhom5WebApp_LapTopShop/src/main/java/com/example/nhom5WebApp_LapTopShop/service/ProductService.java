@@ -1,6 +1,9 @@
 package com.example.nhom5webapp_laptopshop.service;
 
 import java.util.*;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.example.nhom5webapp_laptopshop.domain.Product;
@@ -21,8 +24,8 @@ public class ProductService {
     }
 
     // Lấy ra tất cả sản phẩm
-    public List<Product> getAllProducts(){
-        return this.productRepository.findAll();
+    public Page<Product> getAllProducts(Pageable page){
+        return this.productRepository.findAll(page);
     }
 
     // Lấy ra sản phẩm dựa trên id
