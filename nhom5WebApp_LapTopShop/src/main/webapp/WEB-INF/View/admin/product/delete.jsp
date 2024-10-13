@@ -30,7 +30,7 @@
         </ol>
         <div style="width: 800px" class="container-delete-product mt-5">
           <div class="h4 pb-2 mb-4 border-bottom ">
-            Xóa sản phẩm với ID : 1
+            Xóa sản phẩm với ID : ${id}
           </div>
           <div class="row">
             <div style="border-radius: 20px;" class="p-3 mb-2 bg-danger-subtle text-danger-emphasis">Bạn có chắc chắn muốn xóa sản phẩm này?</div>

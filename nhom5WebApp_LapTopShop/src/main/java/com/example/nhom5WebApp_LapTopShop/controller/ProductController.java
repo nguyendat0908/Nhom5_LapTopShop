@@ -58,7 +58,7 @@ public class ProductController {
 
     // Trang hiển thị danh sách sản phẩm
     @GetMapping("/admin/product")
-    public String getProductPage(Model model) {
+    public String getProductPage(Model model, @RequestParam("page") long page) {
 
         List<Product> listProducts = this.productService.getAllProducts();
         model.addAttribute("products", listProducts);
@@ -93,8 +93,16 @@ public class ProductController {
 
         if (currentProduct != null) {
 
+            // Lưu đường dẫn cũ
+            String oldPathFile = currentProduct.getImage();
+            // Lấy đường dẫn đầy đủ của file chứa
+            String fullOldPathFile = this.uploadService.getFullPathFile(oldPathFile, "product");
+
             // Cập nhật file mới
             if (!file.isEmpty()) {
+                // Xóa file cũ
+                this.uploadService.deleteFile(fullOldPathFile);
+
                 String img = this.uploadService.handleSaveUploadFile(file, "product");
                 currentProduct.setImage(img);
             }
@@ -114,9 +122,18 @@ public class ProductController {
     }
 
     // Xóa sản phẩm
-    @GetMapping("/admin/product/delete")
-    public String getMethodName() {
+    @GetMapping("/admin/product/delete/{id}")
+    public String getDeleteProductPage(Model model, @PathVariable long id) {
+        Product product = this.productService.getProductById(id).get();
+        model.addAttribute("id", id);
+        model.addAttribute("newProduct", new Product());
         return "admin/product/delete";
+    }
+
+    @PostMapping("/admin/product/delete")
+    public String postDeleteProduct(Model model, @ModelAttribute("newProduct") Product product) {
+        this.productService.deleteProductById(product.getId());
+        return "redirect:/admin/product";
     }
 
 }
