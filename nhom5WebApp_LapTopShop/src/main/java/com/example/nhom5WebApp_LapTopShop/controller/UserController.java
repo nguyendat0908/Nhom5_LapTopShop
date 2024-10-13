@@ -37,7 +37,7 @@ public class UserController {
         return "admin/user/show";
     }
 
-    @RequestMapping("/admin/user/{id}")
+    @RequestMapping("/admin/user/view/{id}")
     public String getUserDetailPage(Model model, @PathVariable long id) {
         User user = this.userService.getUserById(id);
         model.addAttribute("user", user);
@@ -56,7 +56,7 @@ public class UserController {
     public String createUserPage(Model model,
             @ModelAttribute("newUser") User user,
             @RequestParam("uploadFile") MultipartFile file) {
-       String avatar = this.uploadService.handleSaveUploadFile(file, "avatar");
+        String avatar = this.uploadService.handleSaveUploadFile(file, "avatar");
         String hashPassword = this.passwordEncoder.encode(user.getPassword());
         user.setPassword(hashPassword);
         user.setRole(this.userService.getRoleByName(user.getRole().getName()));

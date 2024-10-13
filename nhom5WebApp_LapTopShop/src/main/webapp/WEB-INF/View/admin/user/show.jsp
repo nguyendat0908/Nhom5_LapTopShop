@@ -44,7 +44,6 @@
                 <tr>
                   <c:forEach items="${users1}" var="user">
                     <th scope="row">${user.id}</th>
-                    <td>${user.id}</td>
                     <td>${user.email}</td>
                     <td>${user.fullName}</td>
                     <td>${user.role.name}</td>
