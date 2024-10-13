@@ -49,7 +49,7 @@
                     <td>${user.role.name}</td>
                     <td>
                       <a href="/admin/user/view/${user.id}" class="btn btn-success mx-1">View</a>
-                      <a href="admin/user/update/${user.id}" class="btn btn-warning mx-1">Update</a>
+                      <a href="/admin/user/update/${user.id}" class="btn btn-warning mx-1">Update</a>
                       <a href="admin/user/delete/${user.id}" class="btn btn-danger mx-1">Delete</a>
                     </td>>
                   </c:forEach>
