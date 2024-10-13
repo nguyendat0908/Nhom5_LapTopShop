@@ -16,48 +16,48 @@ import jakarta.servlet.ServletContext;
 @Service
 public class UploadService {
 
-    private final ServletContext servletContext;
+	private final ServletContext servletContext;
 
-    public UploadService(ServletContext servletContext){
-        this.servletContext = servletContext;
-    }
+	public UploadService(ServletContext servletContext) {
+		this.servletContext = servletContext;
+	}
 
-    public String handleSaveUploadFile(MultipartFile file, String targeFolder){
+	public String handleSaveUploadFile(MultipartFile file, String targeFolder) {
 
-        // Trỏ tới đường dẫn để lưu file
-        String rootPath = servletContext.getRealPath("/resource/images");
-        String finalNameFile = "";
-        
-			try {
-				byte[] bytes = file.getBytes();
+		// Trỏ tới đường dẫn để lưu file
+		String rootPath = servletContext.getRealPath("/resources/images");
+		String finalNameFile = "";
 
-				// Tạo thư mục để lưu file
-				File dir = new File(rootPath + File.separator + targeFolder);
-				if (!dir.exists())
-					dir.mkdirs();
+		try {
+			byte[] bytes = file.getBytes();
 
-				// Tạo tên file khi lưu xuống lấy mốc thời gian tạo làm tên
-                finalNameFile = System.currentTimeMillis() + "-" + file.getOriginalFilename();
-				File serverFile = new File(dir.getAbsolutePath() + File.separator + finalNameFile);
-				BufferedOutputStream stream = new BufferedOutputStream(
-						new FileOutputStream(serverFile));
-				stream.write(bytes);
-				stream.close();
-			} catch (Exception e) {
-				e.printStackTrace();
-            }
-        return finalNameFile;
-    }
+			// Tạo thư mục để lưu file
+			File dir = new File(rootPath + File.separator + targeFolder);
+			if (!dir.exists())
+				dir.mkdirs();
+
+			// Tạo tên file khi lưu xuống lấy mốc thời gian tạo làm tên
+			finalNameFile = System.currentTimeMillis() + "-" + file.getOriginalFilename();
+			File serverFile = new File(dir.getAbsolutePath() + File.separator + finalNameFile);
+			BufferedOutputStream stream = new BufferedOutputStream(
+					new FileOutputStream(serverFile));
+			stream.write(bytes);
+			stream.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return finalNameFile;
+	}
 
 	// Xóa file cũ để thêm file mới
-	public void deleteFile(String filePath){
+	public void deleteFile(String filePath) {
 		try {
 			// Lấy đường dẫn tới file
 			Path path = Paths.get(filePath);
 			if (Files.exists(path)) {
 				Files.delete(path);
-			}else{
-				System.out.println("Không tìm thấy file: " +filePath);
+			} else {
+				System.out.println("Không tìm thấy file: " + filePath);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -65,8 +65,8 @@ public class UploadService {
 	}
 
 	// Trả về đường dẫn chính xác cho file
-	public String getFullPathFile(String fileName, String targetFolder){
-		return servletContext.getRealPath("/resources/images" +targetFolder+ "/" +fileName);
+	public String getFullPathFile(String fileName, String targetFolder) {
+		return servletContext.getRealPath("/resources/images" + targetFolder + "/" + fileName);
 	}
-    
+
 }
