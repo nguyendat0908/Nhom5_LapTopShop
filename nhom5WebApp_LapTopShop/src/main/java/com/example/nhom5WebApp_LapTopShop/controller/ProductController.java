@@ -2,9 +2,18 @@
 
 // import java.util.*;
 
+<<<<<<< HEAD
 // import org.springframework.http.ResponseEntity;
 // import org.springframework.stereotype.Controller;
 // import org.springframework.ui.Model;
+=======
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+>>>>>>> e11e93178fa4d7967f06c7dd488625ecb97de048
 
 // import com.example.nhom5webapp_laptopshop.domain.Product;
 // import com.example.nhom5webapp_laptopshop.service.ImportJSON;
@@ -65,12 +74,41 @@
 //     }
 // >>>>>>> e59b17f66944401315efd9bfb1d82b84364276d9
 
+<<<<<<< HEAD
 //         String imgProduct = this.uploadService.handleSaveUploadFile(file, "product");
 //         product.setImage(imgProduct);
 
 //         this.productService.handleSaveProduct(product);
 //         return "redirect:admin/product";
 //     }
+=======
+    // Trang hiển thị danh sách sản phẩm
+    @GetMapping("/admin/product")
+    public String getProductPage(Model model, @RequestParam("page") Optional<String> pageOptional) {
+
+        // Không truyền gì thì mặc định page = 1
+        int page = 1;
+        try {
+            if (pageOptional.isPresent()) {
+                // Convert String to int
+                page = Integer.parseInt(pageOptional.get());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        // Tại database: offset + limit
+        Pageable pageable = PageRequest.of(page - 1, 10);
+
+        Page<Product> prs = this.productService.getAllProducts(pageable);
+        // Convert sang list
+        List<Product> listProducts = prs.getContent();
+
+        // Truyền ra view
+        model.addAttribute("currentPage", page);
+        model.addAttribute("totalPage", prs.getTotalPages());
+        model.addAttribute("products", listProducts);
+>>>>>>> e11e93178fa4d7967f06c7dd488625ecb97de048
 
 //     // Trang hiển thị danh sách sản phẩm
 //     @GetMapping("/admin/product")
@@ -107,7 +145,23 @@
 //     public String postUpdateProduct(@ModelAttribute("newProduct") Product product,
 //             @RequestParam("uploadFile") MultipartFile file) {
 
+<<<<<<< HEAD
 //         Product currentProduct = this.productService.getProductById(product.getId()).get();
+=======
+            // Lưu đường dẫn cũ
+            String oldPathFile = currentProduct.getImage();
+            // Lấy đường dẫn đầy đủ của file chứa
+            String fullOldPathFile = this.uploadService.getFullPathFile(oldPathFile, "product");
+
+            // Cập nhật file mới
+            if (!file.isEmpty()) {
+                // Xóa file cũ
+                this.uploadService.deleteFile(fullOldPathFile);
+
+                String img = this.uploadService.handleSaveUploadFile(file, "product");
+                currentProduct.setImage(img);
+            }
+>>>>>>> e11e93178fa4d7967f06c7dd488625ecb97de048
 
 //         if (currentProduct != null) {
 
@@ -125,6 +179,7 @@
 //             currentProduct.setTarget(product.getTarget());
 //             currentProduct.setQuantity(product.getQuantity());
 
+<<<<<<< HEAD
 //             this.productService.handleSaveProduct(currentProduct);
 //         }
 
@@ -139,3 +194,21 @@
 
 // >>>>>>> c77ea160e82668791433e22fa8c5a4394b5300be
 // }
+=======
+    // Xóa sản phẩm
+    @GetMapping("/admin/product/delete/{id}")
+    public String getDeleteProductPage(Model model, @PathVariable long id) {
+        Product product = this.productService.getProductById(id).get();
+        model.addAttribute("id", id);
+        model.addAttribute("newProduct", new Product());
+        return "admin/product/delete";
+    }
+
+    @PostMapping("/admin/product/delete")
+    public String postDeleteProduct(Model model, @ModelAttribute("newProduct") Product product) {
+        this.productService.deleteProductById(product.getId());
+        return "redirect:/admin/product";
+    }
+
+}
+>>>>>>> e11e93178fa4d7967f06c7dd488625ecb97de048
