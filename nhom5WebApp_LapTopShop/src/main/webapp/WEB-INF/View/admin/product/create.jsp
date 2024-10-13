@@ -120,6 +120,45 @@
                 </div>
               </form:form>
             </div>
+            <div class="row mt-3">
+              <div class="col">
+                <label for="exampleFormControlInput1" class="form-label">Hãng:</label>
+                <form:select class="form-select form-select-sm" id="product-factory" aria-label="Small select example" path="factory">
+                  <form:option value="APPLE">Apple (Macbook)</form:option>
+                  <form:option value="ASUS">Asus</form:option>
+                  <form:option value="LENOVO">Lenovo</form:option>
+                  <form:option value="DELL">Dell</form:option>
+                  <form:option value="LG">LG</form:option>
+                  <form:option value="ACER">Acer</form:option>
+                </form:select>
+                <span></span>
+              </div>
+              <div class="col">
+                <label for="exampleFormControlInput1" class="form-label">Mục đích sử dụng:</label>
+                <form:select class="form-select form-select-sm" id="product-target" aria-label="Small select example" path="target">
+                  <form:option value="GAMING">Gaming</form:option>
+                  <form:option value="SINHVIEN-VANPHONG">Sinh viên - Văn phòng</form:option>
+                  <form:option value="THIET-KE-DO-HOA">Thiết kế đồ họa</form:option>
+                  <form:option value="MONG-NHE">Mỏng nhẹ</form:option>
+                  <form:option value="DOANH-NHAN">Doanh nhân</form:option>
+                </form:select>
+                <span></span>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col">
+                <label for="formFileSm" class="form-label">Ảnh sản phẩm:</label>
+                <input class="form-control form-control-sm" id="formFileSm" type="file" accept=".png, .jpg, .jpeg" name="uploadFile"/>
+                <span></span>
+              </div>
+              <div class="mt-4">
+                <img style="width: 300px; display: none;" src="" id="img-thumbnail" alt="...">
+              </div>
+            </div>
+            <div>
+              <button type="submit" class="btn btn-success mt-4" id="submit-form">Tạo mới</button>
+            </div>
+          </form:form>
         </div>
       </div>
     </main>
@@ -130,4 +169,3 @@
     <script src="/js/validate.js"></script>
   </body>
   </html>
-
