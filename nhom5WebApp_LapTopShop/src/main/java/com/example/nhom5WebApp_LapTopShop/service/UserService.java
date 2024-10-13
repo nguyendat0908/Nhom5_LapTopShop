@@ -36,6 +36,10 @@ public class UserService {
         return this.userRepository.findById(id);
     }
 
+    public void deleteUser(long id) {
+        this.userRepository.deleteById(id);
+    }
+
     public Role getRoleByName(String name) {
         return this.roleRepository.findByName(name);
     }

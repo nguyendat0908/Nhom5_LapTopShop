@@ -31,7 +31,7 @@
         <div style="width: 800px" class="container-delete-user">
 
           <div class="h4 pb-2 mb-4 border-bottom ">
-            Xóa người dùng với ID : 5
+            Xóa người dùng với ID : ${id}
           </div>
 
           <div class="row">
