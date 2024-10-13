@@ -37,37 +37,38 @@ prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
             Xem chi tiết sản phẩm
           </li>
         </ol>
-      </div>
-
-      <div class="container-view-product">
-        <div class="h4 pb-2 mb-3 border-bottom">
-          Chi tiết sản phẩm với ID: ${id}
+        <div class="container-view-product">
+          <div class="h4 pb-2 mb-3 border-bottom">
+            Chi tiết sản phẩm với ID: ${id}
+          </div>
+  
+          <ul class="list-group">
+            <li class="list-group-item">
+              <img
+                style="width: 300px"
+                src="/images/product/${product.image}"
+                class="img-thumbnail"
+                alt="..."
+              />
+            </li>
+  
+            <li class="list-group-item list-group-item-dark">
+              Thông tin sản phẩm
+            </li>
+            <li class="list-group-item">ID : ${id}</li>
+            <li class="list-group-item">Tên sản phẩm : ${product.name}</li>
+            <li class="list-group-item">
+              Giá:
+              <fmt:formatNumber value="${product.price}" type="number" /> đ
+            </li>
+            <li class="list-group-item">Hãng : ${product.factory}</li>
+            <li class="list-group-item">Mục đích : ${product.target}</li>
+          </ul>
+          <a href="/admin/product" class="btn btn-success mt-3">Trở về</a>
         </div>
-
-        <ul class="list-group">
-          <li class="list-group-item">
-            <img
-              style="width: 300px"
-              src="/images/product/${product.image}"
-              class="img-thumbnail"
-              alt="..."
-            />
-          </li>
-
-          <li class="list-group-item list-group-item-dark">
-            Thông tin sản phẩm
-          </li>
-          <li class="list-group-item">ID : ${id}</li>
-          <li class="list-group-item">Tên sản phẩm : ${product.name}</li>
-          <li class="list-group-item">
-            Giá:
-            <fmt:formatNumber value="${product.price}" type="number" /> đ
-          </li>
-          <li class="list-group-item">Hãng : ${product.factory}</li>
-          <li class="list-group-item">Mục đích : ${product.target}</li>
-        </ul>
-        <a href="/admin/product" class="btn btn-success mt-3">Trở về</a>
       </div>
+
+      
     </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

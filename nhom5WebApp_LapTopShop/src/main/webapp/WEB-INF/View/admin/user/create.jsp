@@ -56,16 +56,16 @@
             <div class="row">
               <div class="col">
                 <div class="form">
-                  <label for="exampleFormControlInput1" class="form-label">Số điện thoại:</label>
-                  <form:input class="form-control form-control-sm" type="text" placeholder=""
-                    aria-label=".form-control-sm example" path="phone" />
+                  <label for="exampleFormControlInput1" class="form-label">Phone number</label>
+                  <input class="form-control form-control-sm" type="text" placeholder=""
+                    aria-label=".form-control-sm example">
                 </div>
               </div>
               <div class="col">
                 <div class="form">
-                  <label for="exampleFormControlInput1" class="form-label">Họ và tên:</label>
-                  <form:input class="form-control form-control-sm" type="text" placeholder=""
-                    aria-label=".form-control-sm example" path="fullName" />
+                  <label for="exampleFormControlInput1" class="form-label">Full name</label>
+                  <input class="form-control form-control-sm" type="text" placeholder=""
+                    aria-label=".form-control-sm example">
                 </div>
               </div>
 
@@ -73,37 +73,38 @@
             <div class="row">
               <div class="col">
                 <div class="form">
-                  <label for="exampleFormControlInput1" class="form-label">Địa chỉ:</label>
-                  <form:input class="form-control form-control-sm" type="text" placeholder=""
-                    aria-label=".form-control-sm example" path="address"/>
+                  <label for="exampleFormControlInput1" class="form-label">Adress</label>
+                  <input class="form-control form-control-sm" type="text" placeholder=""
+                    aria-label=".form-control-sm example">
                 </div>
               </div>
             </div>
             <div style="padding-bottom: 10px;" class="row">
               <div class="col">
-                <label for="exampleFormControlInput1" class="form-label">Vai trò: </label>
-                <form:select class="form-select form-select-sm" aria-label="Small select example" path="role.name">
-                  <form:option value="ADMIN">ADMIN</form:option>
-                  <form:option value="USER">USER</form:option>
-                </form:select>
+                <label for="exampleFormControlInput1" class="form-label">Role: </label>
+                <select class="form-select form-select-sm" aria-label="Small select example">
+                  <option selected>Open this select menu</option>
+                  <option value="ADMIN">ADMIN</option>
+                  <option value="USER">USER</option>
+                </select>
               </div>
               <div class="col">
                 <div class="col-12">
-                  <label for="formFileSm" class="form-label">Ảnh đại diện:</label>
-                  <input class="form-control form-control-sm" id="formFileSm" type="file" name="uploadFile" accept=".png, .jpg, .jpeg">
+                  <label for="formFileSm" class="form-label">Avatar</label>
+                  <input class="form-control form-control-sm" id="formFileSm" type="file">
+
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col">
-                <img style="width: 300px; display: none;" src=""
-                  class="img-thumbnail" alt="..." id="img-thumbnail">
+                <img style="width: 300px" src="https://deviet.vn/wp-content/uploads/2019/04/vuong-quoc-anh.jpg"
+                  class="img-thumbnail" alt="...">
               </div>
             </div>
             <div style="padding-top: 10px;">
-              <button type="submit" class="btn btn-primary" id="submit-form">Tạo mới</button>
+              <button type="button" class="btn btn-primary">Create</button>
             </div>
-          </form:form>
           </div>
 
     </main>

@@ -2,10 +2,10 @@
 <footer>
     <div class="footer">
         <div class="ch">
-        <div> Copyright © DatLeo </div>
+        <div> Nhóm 5 </div>
         <div>
-         <a href="">Wedsite</a>
-         <a href="">Youtube chanel</a>
+         <a href="">Nhóm 5</a>
+         <a href="">Laptopshop</a>
         </div>
        </div>
     </div>
