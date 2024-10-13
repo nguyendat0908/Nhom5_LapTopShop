@@ -54,10 +54,16 @@
 //         return "admin/product/create";
 //     }
 
+// <<<<<<< HEAD
 //     // Lưu sản phẩm
 //     @PostMapping("/admin/product/create")
 //     public String createProductPage(@ModelAttribute("newProduct") Product product,
 //             @RequestParam("uploadFile") MultipartFile file) {
+// =======
+//         this.productService.handleSaveProduct(product);
+//         return "redirect:/admin/product";
+//     }
+// >>>>>>> e59b17f66944401315efd9bfb1d82b84364276d9
 
 //         String imgProduct = this.uploadService.handleSaveUploadFile(file, "product");
 //         product.setImage(imgProduct);
