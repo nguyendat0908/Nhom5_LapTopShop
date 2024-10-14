@@ -41,8 +41,9 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <c:forEach items="${users1}" var="user">
+                <c:forEach items="${users1}" var="user">
+                  <tr>
+
                     <th scope="row">${user.id}</th>
                     <td>${user.email}</td>
                     <td>${user.fullName}</td>
@@ -51,8 +52,9 @@
                       <a href="/admin/user/view/${user.id}" class="btn btn-success mx-1">View</a>
                       <a href="/admin/user/update/${user.id}" class="btn btn-warning mx-1">Update</a>
                       <a href="admin/user/delete/${user.id}" class="btn btn-danger mx-1">Delete</a>
-                    </td>>
-                  </c:forEach>
+                    </td>
+                  </tr>
+                </c:forEach>
 
 
               </tbody>
