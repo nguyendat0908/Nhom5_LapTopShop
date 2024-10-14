@@ -34,7 +34,7 @@
 
           <div class="container-view-user">
             <div class="h4 pb-2 mb-3 border-bottom ">
-              User detail with ID: ${user.id}
+              User detail with ID: ${id}
             </div>
 
             <ul class="list-group">
@@ -47,7 +47,7 @@
               <li class="list-group-item">Avatar : ${user.avatar}</li>
             </ul>
             <div style="padding-top: 10px;">
-              <button type="button" class="cbtn btn-sucess">Back</button>
+              <a href="/admin/user"> <button type="button" class="cbtn btn-sucess">Back</button> </a>
             </div>
           </div>
         </main>

@@ -9,7 +9,6 @@ import com.example.nhom5webapp_laptopshop.domain.User;
 import com.example.nhom5webapp_laptopshop.repository.RoleRepository;
 import com.example.nhom5webapp_laptopshop.repository.UserRepository;
 
-import jakarta.transaction.Transactional;
 
 @Service
 public class UserService {
@@ -23,7 +22,6 @@ public class UserService {
     }
 
     // Lưu người dùng
-    @Transactional
     public User handleSaveUser(User user) {
         return this.userRepository.save(user);
     }

@@ -38,7 +38,7 @@
                                 <div class="row" style="display: none;">
                                     <div class="form">
                                         <label for="exampleInputEmail1" class="form-label">Id</label>
-                                        <form:input type="email" class="form-control form-control-sm"
+                                        <form:input type="id" class="form-control form-control-sm"
                                             id="exampleInputEmail1" aria-describedby="emailHelp" path="id" />
                                     </div>
                                 </div>
