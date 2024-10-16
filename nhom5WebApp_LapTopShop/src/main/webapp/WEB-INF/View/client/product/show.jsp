@@ -26,7 +26,7 @@ uri="http://www.springframework.org/tags/form" %>
       <div>
         <ol class="breadcrumb">
           <li class="breadcrumb-item active" aria-current="page">
-            <a href="/">Home</a>
+            <a href="/">Trang chủ</a>
           </li>
           <li class="breadcrumb-item active" aria-current="page">
             Danh sách sản phẩm
@@ -272,206 +272,57 @@ uri="http://www.springframework.org/tags/form" %>
         </div>
         <div class="client-product-content">
           <div class="row g-4">
-            <div class="col-md-6 col-lg-5 col-xl-4">
-              <div
-                class="product border border-dark-subtle rounded-4 overflow-hidden"
-              >
-                <div class="product-img overflow-hidden">
-                  <a href="#"
-                    ><img
-                      src="https://cdn.mos.cms.futurecdn.net/Ajc3ezCTN4FGz2vF4LpQn9-1200-80.jpg"
-                      alt=""
-                  /></a>
-                </div>
-                <span class="label bg-warning rounded-3 text-white px-2 py-1"
-                  >Laptop</span
-                >
-                <div class="product-desc text-center">
-                  <p class="fs-6 mt-3 mb-0">
-                    <a href="#" class="text-black">Laptop Asus TUF Gaming</a>
-                  </p>
-                  <p class="fs-7 text-secondary mt-1">
-                    <span>i5-10300H</span>, <span>RAM 8GB</span>
-                  </p>
-                  <p class="mb-0">17.000.000 <span>đ</span></p>
-                  <a
-                    href="#"
-                    class="btn rounded-pill border border-warning-subtle text-success-emphasis mt-4"
-                    ><i class="bx bxs-shopping-bag"></i>Thêm vào giỏ hàng</a
+            <c:forEach var="product" items="${products}">
+              <div class="col-md-6 col-lg-5 col-xl-4">
+                <div class="product border border-dark-subtle rounded-4 overflow-hidden">
+                  <div class="product-img overflow-hidden">
+                    <a href="#"
+                      ><img
+                        src="images/product/${product.image}"
+                        alt=""
+                    /></a>
+                  </div>
+                  <span class="label bg-warning rounded-3 text-white px-2 py-1"
+                    >${product.factory}</span
                   >
+                  <div class="product-desc text-center">
+                    <p class="fs-6 mt-3 mb-0">
+                      <a href="#" class="text-black">${product.name}</a>
+                    </p>
+                    <p class="fs-7 text-secondary mt-1">
+                      <span>${product.shortDesc}</span>
+                    </p>
+                    <p class="mb-0"><fmt:formatNumber
+                      type="number"
+                      value="${product.price}"
+                    />
+                    đ</p>
+                    <a
+                      href="#"
+                      class="btn rounded-pill border border-warning-subtle text-success-emphasis mt-4"
+                      ><i class="bx bxs-shopping-bag"></i>Thêm vào giỏ hàng</a
+                    >
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-6 col-lg-5 col-xl-4">
-              <div
-                class="product border border-dark-subtle rounded-4 overflow-hidden"
-              >
-                <div class="product-img overflow-hidden">
-                  <a href="#"
-                    ><img
-                      src="https://cdn.mos.cms.futurecdn.net/Ajc3ezCTN4FGz2vF4LpQn9-1200-80.jpg"
-                      alt=""
-                  /></a>
-                </div>
-                <span class="label bg-warning rounded-3 text-white px-2 py-1"
-                  >Laptop</span
-                >
-                <div class="product-desc text-center">
-                  <p class="fs-6 mt-3 mb-0">
-                    <a href="#" class="text-black">Laptop Asus TUF Gaming</a>
-                  </p>
-                  <p class="fs-7 text-secondary mt-1">
-                    <span>i5-10300H</span>, <span>RAM 8GB</span>
-                  </p>
-                  <p class="mb-0">17.000.000 <span>đ</span></p>
-                  <a
-                    href="#"
-                    class="btn rounded-pill border border-warning-subtle text-success-emphasis mt-4"
-                    ><i class="bx bxs-shopping-bag"></i>Thêm vào giỏ hàng</a
-                  >
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-5 col-xl-4">
-              <div
-                class="product border border-dark-subtle rounded-4 overflow-hidden"
-              >
-                <div class="product-img overflow-hidden">
-                  <a href="#"
-                    ><img
-                      src="https://cdn.mos.cms.futurecdn.net/Ajc3ezCTN4FGz2vF4LpQn9-1200-80.jpg"
-                      alt=""
-                  /></a>
-                </div>
-                <span class="label bg-warning rounded-3 text-white px-2 py-1"
-                  >Laptop</span
-                >
-                <div class="product-desc text-center">
-                  <p class="fs-6 mt-3 mb-0">
-                    <a href="#" class="text-black">Laptop Asus TUF Gaming</a>
-                  </p>
-                  <p class="fs-7 text-secondary mt-1">
-                    <span>i5-10300H</span>, <span>RAM 8GB</span>
-                  </p>
-                  <p class="mb-0">17.000.000 <span>đ</span></p>
-                  <a
-                    href="#"
-                    class="btn rounded-pill border border-warning-subtle text-success-emphasis mt-4"
-                    ><i class="bx bxs-shopping-bag"></i>Thêm vào giỏ hàng</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div style="margin-top: 10px" class="row g-4">
-            <div class="col-md-6 col-lg-5 col-xl-4">
-              <div
-                class="product border border-dark-subtle rounded-4 overflow-hidden"
-              >
-                <div class="product-img overflow-hidden">
-                  <a href="#"
-                    ><img
-                      src="https://cdn.mos.cms.futurecdn.net/Ajc3ezCTN4FGz2vF4LpQn9-1200-80.jpg"
-                      alt=""
-                  /></a>
-                </div>
-                <span class="label bg-warning rounded-3 text-white px-2 py-1"
-                  >Laptop</span
-                >
-                <div class="product-desc text-center">
-                  <p class="fs-6 mt-3 mb-0">
-                    <a href="#" class="text-black">Laptop Asus TUF Gaming</a>
-                  </p>
-                  <p class="fs-7 text-secondary mt-1">
-                    <span>i5-10300H</span>, <span>RAM 8GB</span>
-                  </p>
-                  <p class="mb-0">17.000.000 <span>đ</span></p>
-                  <a
-                    href="#"
-                    class="btn rounded-pill border border-warning-subtle text-success-emphasis mt-4"
-                    ><i class="bx bxs-shopping-bag"></i>Thêm vào giỏ hàng</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-5 col-xl-4">
-              <div
-                class="product border border-dark-subtle rounded-4 overflow-hidden"
-              >
-                <div class="product-img overflow-hidden">
-                  <a href="#"
-                    ><img
-                      src="https://cdn.mos.cms.futurecdn.net/Ajc3ezCTN4FGz2vF4LpQn9-1200-80.jpg"
-                      alt=""
-                  /></a>
-                </div>
-                <span class="label bg-warning rounded-3 text-white px-2 py-1"
-                  >Laptop</span
-                >
-                <div class="product-desc text-center">
-                  <p class="fs-6 mt-3 mb-0">
-                    <a href="#" class="text-black">Laptop Asus TUF Gaming</a>
-                  </p>
-                  <p class="fs-7 text-secondary mt-1">
-                    <span>i5-10300H</span>, <span>RAM 8GB</span>
-                  </p>
-                  <p class="mb-0">17.000.000 <span>đ</span></p>
-                  <a
-                    href="#"
-                    class="btn rounded-pill border border-warning-subtle text-success-emphasis mt-4"
-                    ><i class="bx bxs-shopping-bag"></i>Thêm vào giỏ hàng</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-5 col-xl-4">
-              <div
-                class="product border border-dark-subtle rounded-4 overflow-hidden"
-              >
-                <div class="product-img overflow-hidden">
-                  <a href="#"
-                    ><img
-                      src="https://cdn.mos.cms.futurecdn.net/Ajc3ezCTN4FGz2vF4LpQn9-1200-80.jpg"
-                      alt=""
-                  /></a>
-                </div>
-                <span class="label bg-warning rounded-3 text-white px-2 py-1"
-                  >Laptop</span
-                >
-                <div class="product-desc text-center">
-                  <p class="fs-6 mt-3 mb-0">
-                    <a href="#" class="text-black">Laptop Asus TUF Gaming</a>
-                  </p>
-                  <p class="fs-7 text-secondary mt-1">
-                    <span>i5-10300H</span>, <span>RAM 8GB</span>
-                  </p>
-                  <p class="mb-0">17.000.000 <span>đ</span></p>
-                  <a
-                    href="#"
-                    class="btn rounded-pill border border-warning-subtle text-success-emphasis mt-4"
-                    ><i class="bx bxs-shopping-bag"></i>Thêm vào giỏ hàng</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-
+            </c:forEach>
           <nav aria-label="Page navigation example">
             <ul class="pagination mt-5 justify-content-center">
               <li class="page-item">
-                <a class="page-link" href="#" aria-label="Previous">
+                <a class="${1 eq currentPage ? 'disabled page-link' : 'page-link'}" href="/products?page=${currentPage - 1}" aria-label="Previous">
                   <span aria-hidden="true">&laquo;</span>
                 </a>
               </li>
+              <c:forEach begin="0" end="${totalPage - 1}" varStatus="loop">
+                <li class="page-item">
+                  <a class="${(loop.index + 1) eq currentPage ? 'active page-link' : 'page-link'}" 
+                      href="/products?page=${loop.index + 1}">
+                      ${loop.index + 1}
+                  </a>
+                </li>
+              </c:forEach>
               <li class="page-item">
-                <a class="page-link" href="#">1</a>
-              </li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
+                <a class="${totalPage eq currentPage ? 'disabled page-link' : 'page-link'}" href="/products?page=${currentPage + 1}" aria-label="Next">
                   <span aria-hidden="true">&raquo;</span>
                 </a>
               </li>

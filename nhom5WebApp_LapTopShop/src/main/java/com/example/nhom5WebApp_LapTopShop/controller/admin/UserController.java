@@ -1,4 +1,4 @@
-package com.example.nhom5webapp_laptopshop.controller;
+package com.example.nhom5webapp_laptopshop.controller.admin;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

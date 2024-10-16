@@ -1,4 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
     <!DOCTYPE html>
     <html lang="en">
 
@@ -8,7 +11,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css">
         <link rel="stylesheet" href="/css/styles.css">
-        <title>Document</title>
+        <title>Chi tiết đơn hàng - Quản trị viên</title>
     </head>
 
     <body>
@@ -16,15 +19,15 @@
         <jsp:include page="../layout/sidebar.jsp" />
         <main class="content">
             <div class="container-fluid px-4">
-                <h1>Manager Order</h1>
+                <h1>Quản lý đơn hàng</h1>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item active" aria-current="page">
-                        <a href="#">Dashboard</a>
+                        <a href="/admin">Bảng điều khiển</a>
                     </li>
-                    <li class="breadcrumb-item active" aria-current="page"><a href="#">Order</a></li>
-                    <li class="breadcrumb-item" aria-current="page">View Detail</li>
+                    <li class="breadcrumb-item active" aria-current="page"><a href="/admin/order">Đơn hàng</a></li>
+                    <li class="breadcrumb-item" aria-current="page">Xem chi tiết đơn hàng</li>
                 </ol>
-                <h4 class="m-0">Order Detail with ID = <span>1</span></h4>
+                <h4 class="m-0">Chi tiết sản phẩm với ID = <span>1</span></h4>
                 <div class="mt-2">
                     <table class="table table-bordered align-middle text-center">
                         <thead>
@@ -119,7 +122,7 @@
                             </li>
                         </ul>
                     </nav> -->
-                    <a href="#" class="btn btn-success">Back</a>
+                    <a href="/admin/order" class="btn btn-success">Back</a>
                 </div>
             </div>
             <!-- <jsp:include page="../layout/footer.jsp" /> -->

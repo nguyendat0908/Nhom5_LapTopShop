@@ -79,7 +79,7 @@ uri="http://java.sun.com/jsp/jstl/fmt" %>
           <nav aria-label="Page navigation example">
             <ul class="pagination mt-5 justify-content-center">
               <li class="page-item">
-                <a class="${1 eq currentPage ? 'disabled page-link' : page-link}" href="/admin/product?page=${currentPage - 1}" aria-label="Previous">
+                <a class="${1 eq currentPage ? 'disabled page-link' : 'page-link'}" href="/admin/product?page=${currentPage - 1}" aria-label="Previous">
                   <span aria-hidden="true">&laquo;</span>
                 </a>
               </li>
