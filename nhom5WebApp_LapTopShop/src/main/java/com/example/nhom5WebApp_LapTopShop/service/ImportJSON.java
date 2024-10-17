@@ -1,12 +1,12 @@
-package com.example.nhom5webapp_laptopshop.service;
+package com.example.nhom5WebApp_LapTopShop.service;
 
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import com.example.nhom5webapp_laptopshop.domain.Product;
-import com.example.nhom5webapp_laptopshop.repository.ProductRepository;
+import com.example.nhom5WebApp_LapTopShop.domain.Product;
+import com.example.nhom5WebApp_LapTopShop.repository.ProductRepository;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 

@@ -1,4 +1,4 @@
-package com.example.nhom5webapp_laptopshop.domain;
+package com.example.nhom5WebApp_LapTopShop.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -19,7 +19,7 @@ public class Role {
     private String name;
     private String description;
 
-    // Role one -> to many -> users
+    // Role one -> to many -> Users
     @OneToMany(mappedBy = "role")
     private List<User> users;
 
@@ -47,16 +47,9 @@ public class Role {
         this.description = description;
     }
 
-    public List<User> getUsers() {
-        return users;
-    }
-    
-    public void setUsers(List<User> users) {
-        this.users = users;
-    }
-    
     @Override
     public String toString() {
         return "Role [id=" + id + ", name=" + name + ", description=" + description + "]";
     }
+
 }

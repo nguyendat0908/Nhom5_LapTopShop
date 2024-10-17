@@ -1,4 +1,4 @@
-package com.example.nhom5webapp_laptopshop.domain;
+package com.example.nhom5WebApp_LapTopShop.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -15,15 +15,16 @@ public class CartDetail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
     private long quantity;
     private double price;
 
-    // CartDetails many -> to one -> cart
+    // CartDetails many -> to one Cart
     @ManyToOne
     @JoinColumn(name = "cart_id")
     private Cart cart;
 
-    // CartDetails many -> to one -> product
+    // CartDetails many -> to one Product
     @ManyToOne
     @JoinColumn(name = "product_id")
     private Product product;
@@ -68,8 +69,5 @@ public class CartDetail {
         this.product = product;
     }
 
-    @Override
-    public String toString() {
-        return "CartDetail [id=" + id + ", quantity=" + quantity + ", price=" + price + "]";
-    }
+    
 }

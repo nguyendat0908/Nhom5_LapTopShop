@@ -1,11 +1,11 @@
-package com.example.nhom5webapp_laptopshop.service.specification;
+package com.example.nhom5WebApp_LapTopShop.service.specification;
 
 import org.springframework.data.jpa.domain.Specification;
 
 import java.util.List;
 
-import com.example.nhom5webapp_laptopshop.domain.Product;
-import com.example.nhom5webapp_laptopshop.domain.Product_;
+import com.example.nhom5WebApp_LapTopShop.domain.Product;
+import com.example.nhom5WebApp_LapTopShop.domain.Product_;
 
 public class ProductSpec {
 
@@ -17,8 +17,6 @@ public class ProductSpec {
      * select, join,group by, order by, etc. (ít dùng)
      * CriteriaBuilder: sử dụng predicates, để build ra điều kiện của câu query
      */
-
-    // Truy vấn dựa theo tên sản phẩm
     public static Specification<Product> nameLike(String name) {
         return (root, query, criteriaBuilder) -> criteriaBuilder.like(root.get(Product_.NAME), "%" + name + "%");
     }
@@ -39,7 +37,7 @@ public class ProductSpec {
     }
 
     // Truy vấn lấy ra sản phẩm với nhiều hãng sản xuất
-    public static Specification<Product> matchListFactory(List<String> factory) {
+    public static Specification<Product> matchListFactory(List<String> factory){
         return (root, query, criteriaBuilder) -> criteriaBuilder.in(root.get(Product_.FACTORY)).value(factory);
     }
 
@@ -49,19 +47,20 @@ public class ProductSpec {
     }
 
     // Truy vấn lấy ra sản phẩm với nhiều mục đích
-    public static Specification<Product> matchListTarget(List<String> target) {
+    public static Specification<Product> matchListTarget(List<String> target){
         return (root, query, criteriaBuilder) -> criteriaBuilder.in(root.get(Product_.TARGET)).value(target);
     }
 
     // Truy vấn lấy ra sản phẩm với điều kiện giá trong khoảng
-    public static Specification<Product> matchPrice(double min, double max) {
+    public static Specification<Product> matchPrice(double min, double max){
         return (root, query, criteriaBuilder) -> criteriaBuilder.and(
-                criteriaBuilder.gt(root.get(Product_.PRICE), min),
-                criteriaBuilder.le(root.get(Product_.PRICE), max));
+            criteriaBuilder.gt(root.get(Product_.PRICE), min),
+            criteriaBuilder.le(root.get(Product_.PRICE), max)
+        );
     }
 
     // Truy vấn lấy ra sản phẩm với nhiều điều kiện giá trong khoảng
-    public static Specification<Product> matchMultiplePrice(double min, double max) {
+    public static Specification<Product> matchMultiplePrice(double min, double max){
         return (root, query, criteriaBuilder) -> criteriaBuilder.between(root.get(Product_.PRICE), min, max);
     }
 }

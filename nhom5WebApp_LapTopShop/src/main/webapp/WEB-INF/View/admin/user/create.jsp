@@ -1,117 +1,137 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+        <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 
-  <!DOCTYPE html>
-  <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <title>Tạo mới người dùng - Quản trị viên</title>
-  </head>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Hỏi Dân IT - Dự án laptopshop" />
+    <meta name="author" content="Hỏi Dân IT" />
+    <title>Create - DatLeo</title>
+    <link href="/css/styles.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            const avatarFile = $("#avatarFile");
+            avatarFile.change(function (e) {
+                const imgURL = URL.createObjectURL(e.target.files[0]);
+                $("#avatarPreview").attr("src", imgURL);
+                $("#avatarPreview").css({ "display": "block" });
+            });
+        });
+    </script>
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+</head>
 
-  <body>
-    <jsp:include page="../layout/header.jsp" />
-    <jsp:include page="../layout/sidebar.jsp" />
-    <main class="content">
-      <div class="container-fluid px-4">
-        <h1>Người dùng</h1>
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item active" aria-current="page">
-            <a href="/admin">Bảng điều khiển</a>
-          <li class="breadcrumb-item active" aria-current="page"></li>
-          <a href="/admin/user">Người dùng</a>
-          <li class="breadcrumb-item active" aria-current="page"></li>
-          </li>
-          <li class="breadcrumb-item active" aria-current="page">Tạo mới người dùng</li>
-        </ol>
-        <div class="container-create-user">
+<body class="sb-nav-fixed">
 
-          <div class="container-view-user">
-            <div class="h4 pb-2 mb-2 border-bottom ">
-              Tạo mới một người dùng
-            </div>
-            <form:form method="post" action="/admin/user/create" modelAttribute="newUser" enctype="multipart/form-data">
-            <div class="row">
-              <div class="col">
-                <div class="form">
-                  <label for="exampleFormControlInput1" class="form-label">Email:</label>
-                  <form:input class="form-control form-control-sm" type="text" placeholder=""
-                    aria-label=".form-control-sm example" path="email" />
+    <!-- Tai su dung code header -->
+    <jsp:include page="../layout/header.jsp"/>
+
+    <div id="layoutSidenav">
+        
+        <!-- Tai su dung code sidebar -->
+        <jsp:include page="../layout/sidebar.jsp"/>
+
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid px-4">
+                    <h1 class="mt-4">Users</h1>
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="/admin/user">User</a></li>
+                        <li class="breadcrumb-item active">Create user</li>
+                    </ol>
+                    <div class="container col-12 col-md-6 mt-5">
+                        <div class="row">
+                            <div class="col-12 mx-auto">
+                                <h4>Create a User</h4>
+                                <hr />
+                            </div>
+                                <form:form method="post" action="/admin/user/create" modelAttribute="newUser" class="row" enctype="multipart/form-data">
+
+                                    <c:set var="errorEmail">
+                                        <form:errors path="email" cssClass="invalid-feedback"/>
+                                    </c:set>
+                                    <c:set var="errorPassword">
+                                        <form:errors path="password" cssClass="invalid-feedback"/>
+                                    </c:set>
+                                    <c:set var="errorFullName">
+                                        <form:errors path="fullName" cssClass="invalid-feedback"/>
+                                    </c:set>
+
+                                    <div class="col-12 col-md-6 mx-auto">
+                                        <div class="mb-3">
+                                            <label class="form-label">Email</label>
+                                            <form:input type="email" 
+                                            class="form-control ${not empty errorEmail ? 'is-invalid' : ''}" path="email"/>
+                                            ${errorEmail}
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 mx-auto">
+                                        <div class="mb-3">
+                                            <label class="form-label">Password</label>
+                                            <form:input type="password" 
+                                            class="form-control ${not empty errorPassword ? 'is-invalid' : ''}" path="password"/>
+                                            ${errorPassword}
+                                        </div>      
+                                    </div>
+                                    <div class="col-12 col-md-6 mx-auto">
+                                        <div class="mb-3">
+                                            <label class="form-label">Phone Number</label>
+                                            <form:input type="tel" class="form-control" path="phone"/>
+                                        </div>      
+                                    </div>
+                                    <div class="col-12 col-md-6 mx-auto">
+                                        <div class="mb-3">
+                                            <label class="form-label">Full Name</label>
+                                            <form:input type="text" 
+                                            class="form-control ${not empty errorFullName ? 'is-invalid' : ''}" path="fullName"/>
+                                            ${errorFullName}
+                                        </div>      
+                                    </div>
+                                    <div class="col-12 mx-auto">
+                                        <div class="mb-3">
+                                            <label class="form-label">Address</label>
+                                            <form:input type="text" class="form-control" path="address"/>
+                                        </div>      
+                                    </div>
+                                    <div class="col-12 col-md-6 mx-auto">
+                                        <div class="mb-3">
+                                            <label class="form-label">Role</label>
+                                            <form:select class="form-select" path="role.name">
+                                                <form:option value="ADMIN">ADMIN</form:option>
+                                                <form:option value="USER">USER</form:option>
+                                            </form:select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 mx-auto">
+                                        <div class="mb-3">
+                                            <label for="avatarFile" class="form-label">Avatar</label>
+                                            <input class="form-control" type="file" id="avatarFile" accept=".png, .jpg, .jpeg" name="uploadFile"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <img style="max-height: 250px; display: none;" alt="Avatar preview" id="avatarPreview">
+                                    </div>
+                                    <div class="col-12 mb-5">
+                                        <button type="submit" class="btn btn-primary">Create</button>
+                                    </div>
+                            </form:form>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="col">
-                <div class="form">
-                  <label for="exampleFormControlInput1" class="form-label">Mật khẩu:</label>
-                  <form:input class="form-control form-control-sm" type="text" placeholder=""
-                    aria-label=".form-control-sm example" path="password" />
-                </div>
-              </div>
-            </div>
+            </main>
+            <jsp:include page="../layout/footer.jsp"/>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+</body>
 
-            <div class="row">
-              <div class="col">
-                <div class="form">
-                  <label for="exampleFormControlInput1" class="form-label">Phone number</label>
-                  <input class="form-control form-control-sm" type="text" placeholder=""
-                    aria-label=".form-control-sm example">
-                </div>
-              </div>
-              <div class="col">
-                <div class="form">
-                  <label for="exampleFormControlInput1" class="form-label">Full name</label>
-                  <input class="form-control form-control-sm" type="text" placeholder=""
-                    aria-label=".form-control-sm example">
-                </div>
-              </div>
-
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="form">
-                  <label for="exampleFormControlInput1" class="form-label">Adress</label>
-                  <input class="form-control form-control-sm" type="text" placeholder=""
-                    aria-label=".form-control-sm example">
-                </div>
-              </div>
-            </div>
-            <div style="padding-bottom: 10px;" class="row">
-              <div class="col">
-                <label for="exampleFormControlInput1" class="form-label">Role: </label>
-                <select class="form-select form-select-sm" aria-label="Small select example">
-                  <option selected>Open this select menu</option>
-                  <option value="ADMIN">ADMIN</option>
-                  <option value="USER">USER</option>
-                </select>
-              </div>
-              <div class="col">
-                <div class="col-12">
-                  <label for="formFileSm" class="form-label">Avatar</label>
-                  <input class="form-control form-control-sm" id="formFileSm" type="file">
-
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <img style="width: 300px" src="https://deviet.vn/wp-content/uploads/2019/04/vuong-quoc-anh.jpg"
-                  class="img-thumbnail" alt="...">
-              </div>
-            </div>
-            <div style="padding-top: 10px;">
-              <button type="button" class="btn btn-primary">Create</button>
-            </div>
-          </div>
-
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"></script>
-    <script src="/js/scripts.js"></script>
-  </body>
-
-  </html>
+</html>

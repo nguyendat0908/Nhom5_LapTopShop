@@ -1,9 +1,9 @@
-package com.example.nhom5webapp_laptopshop;
+package com.example.nhom5WebApp_LapTopShop;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(exclude = org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration.class)
+@SpringBootApplication
 public class Nhom5WebAppLapTopShopApplication {
 
 	public static void main(String[] args) {

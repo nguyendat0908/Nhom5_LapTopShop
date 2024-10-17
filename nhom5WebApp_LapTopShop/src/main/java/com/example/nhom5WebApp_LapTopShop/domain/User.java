@@ -1,4 +1,4 @@
-package com.example.nhom5webapp_laptopshop.domain;
+package com.example.nhom5WebApp_LapTopShop.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -9,6 +9,9 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 
 import java.util.*;;
 
@@ -19,20 +22,29 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    @NotNull
+    @Email(message = "Email không đúng định dạng", regexp = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$")
     private String email;
+
+    @NotNull
+    @Size(min = 2, message = "Password phải có tối thiểu 2 ký tự")
     private String password;
+
+    @NotNull
+    @Size(min = 2, message = "Tên phải có tối thiểu 2 ký tự")
     private String fullName;
+
     private String address;
     private String phone;
     private String avatar;
 
-    // User many -> to one -> role
+    // User many -> to one -> Role
     @ManyToOne
-    // Foreign key
     @JoinColumn(name = "role_id")
     private Role role;
 
-    // User one -> to many -> orders
+    // User one -> to many -> Orders
     @OneToMany(mappedBy = "user")
     private List<Order> orders;
 
@@ -125,5 +137,4 @@ public class User {
         return "User [id=" + id + ", email=" + email + ", password=" + password + ", fullName=" + fullName
                 + ", address=" + address + ", phone=" + phone + ", avatar=" + avatar + "]";
     }
-
 }

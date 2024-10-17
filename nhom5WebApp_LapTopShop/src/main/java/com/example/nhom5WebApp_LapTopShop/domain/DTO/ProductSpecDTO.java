@@ -1,4 +1,4 @@
-package com.example.nhom5webapp_laptopshop.domain.DTO;
+package com.example.nhom5WebApp_LapTopShop.domain.DTO;
 
 import java.util.List;
 import java.util.Optional;
@@ -10,7 +10,7 @@ public class ProductSpecDTO {
     private Optional<List<String>> target;
     private Optional<String> sort;
     private Optional<List<String>> price;
-
+    
     public Optional<String> getPage() {
         return page;
     }

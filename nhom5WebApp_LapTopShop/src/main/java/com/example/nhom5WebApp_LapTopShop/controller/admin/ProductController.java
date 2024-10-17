@@ -1,4 +1,4 @@
-package com.example.nhom5webapp_laptopshop.controller.admin;
+package com.example.nhom5WebApp_LapTopShop.controller.admin;
 
 import java.util.*;
 
@@ -8,11 +8,14 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 
-import com.example.nhom5webapp_laptopshop.domain.Product;
-import com.example.nhom5webapp_laptopshop.service.ImportJSON;
-import com.example.nhom5webapp_laptopshop.service.ProductService;
-import com.example.nhom5webapp_laptopshop.service.UploadService;
+import com.example.nhom5WebApp_LapTopShop.domain.Product;
+import com.example.nhom5WebApp_LapTopShop.service.ImportJSON;
+import com.example.nhom5WebApp_LapTopShop.service.ProductService;
+import com.example.nhom5WebApp_LapTopShop.service.UploadService;
+
+import jakarta.validation.Valid;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -40,92 +43,88 @@ public class ProductController {
         return importJSON.loadProductsFromJson();
     }
 
-    // Trang tạo sản phẩm
+    // View Page Create Product
     @GetMapping("/admin/product/create")
     public String getCreateProductPage(Model model) {
         model.addAttribute("newProduct", new Product());
         return "admin/product/create";
     }
 
-    // Lưu sản phẩm
+    // Render Data Product
     @PostMapping("/admin/product/create")
-    public String createProductPage(@ModelAttribute("newProduct") Product product,
-            @RequestParam("uploadFile") MultipartFile file) {
+    public String createProductPage(Model model, @ModelAttribute("newProduct") @Valid Product product,
+            BindingResult newProductBindingResult, @RequestParam("uploadFile") MultipartFile file) {
 
-        String imgProduct = this.uploadService.handleSaveUploadFile(file, "product");
-        product.setImage(imgProduct);
+        // If have error
+        if (newProductBindingResult.hasErrors()) {
+            return "admin/product/create";
+        }
+
+        String img = this.uploadService.handleSaveUploadFile(file, "product");
+
+        product.setImage(img);
 
         this.productService.handleSaveProduct(product);
         return "redirect:/admin/product";
     }
 
-    // Trang hiển thị danh sách sản phẩm
+    // View Page Table Product
     @GetMapping("/admin/product")
-    public String getProductPage(Model model, @RequestParam("page") Optional<String> pageOptional) {
+    public String getProduct(Model model,
+            @RequestParam("page") Optional<String> pageOptional) {
 
-        // Không truyền gì thì mặc định page = 1
         int page = 1;
         try {
             if (pageOptional.isPresent()) {
-                // Convert String to int
+                // Convert from String to int
                 page = Integer.parseInt(pageOptional.get());
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            // TODO: handle exception
         }
 
-        // Tại database: offset + limit
+        // Pagination
         Pageable pageable = PageRequest.of(page - 1, 10);
-
         Page<Product> prs = this.productService.getAllProducts(pageable);
-        // Convert sang list
         List<Product> listProducts = prs.getContent();
 
-        // Truyền ra view
+        // Get current page
         model.addAttribute("currentPage", page);
-        model.addAttribute("totalPage", prs.getTotalPages());
+        model.addAttribute("totalPages", prs.getTotalPages());
         model.addAttribute("products", listProducts);
-
         return "admin/product/show";
     }
 
-    // Hiển thị trang chi tiết sản phẩm
+    // View Page Detail Product
     @GetMapping("/admin/product/{id}")
-    public String getViewDetailProductPage(Model model, @PathVariable long id) {
+    public String getProductDetailPage(Model model, @PathVariable long id) {
         Product product = this.productService.getProductById(id).get();
         model.addAttribute("product", product);
         return "admin/product/view";
     }
 
-    // Trang cập nhật sản phẩm
+    // Get Product By Id Fill to Input
     @GetMapping("/admin/product/update/{id}")
     public String getUpdateProductPage(Model model, @PathVariable long id) {
-
         Optional<Product> currentProduct = this.productService.getProductById(id);
-        model.addAttribute("newProduct", currentProduct);
-
+        model.addAttribute("newProduct", currentProduct.get());
         return "admin/product/update";
     }
 
-    // Cập nhật sản phẩm
+    // Update Product
     @PostMapping("/admin/product/update")
-    public String postUpdateProduct(@ModelAttribute("newProduct") Product product,
-            @RequestParam("uploadFile") MultipartFile file) {
+    public String postUpdateUser(@ModelAttribute("newProduct") @Valid Product product,
+            BindingResult newProductBindingResult, @RequestParam("uploadFile") MultipartFile file) {
+
+        if (newProductBindingResult.hasErrors()) {
+            return "admin/product/update";
+        }
 
         Product currentProduct = this.productService.getProductById(product.getId()).get();
-
         if (currentProduct != null) {
 
-            // Lưu đường dẫn cũ
-            String oldPathFile = currentProduct.getImage();
-            // Lấy đường dẫn đầy đủ của file chứa
-            String fullOldPathFile = this.uploadService.getFullPathFile(oldPathFile, "product");
-
-            // Cập nhật file mới
+            // Update new file
             if (!file.isEmpty()) {
-                // Xóa file cũ
-                this.uploadService.deleteFile(fullOldPathFile);
-
                 String img = this.uploadService.handleSaveUploadFile(file, "product");
                 currentProduct.setImage(img);
             }
@@ -140,11 +139,10 @@ public class ProductController {
 
             this.productService.handleSaveProduct(currentProduct);
         }
-
         return "redirect:/admin/product";
     }
 
-    // Xóa sản phẩm
+    // Delete Product
     @GetMapping("/admin/product/delete/{id}")
     public String getDeleteProductPage(Model model, @PathVariable long id) {
         Product product = this.productService.getProductById(id).get();
@@ -155,7 +153,7 @@ public class ProductController {
 
     @PostMapping("/admin/product/delete")
     public String postDeleteProduct(Model model, @ModelAttribute("newProduct") Product product) {
-        this.productService.deleteProductById(product.getId());
+        this.productService.deleteProduct(product.getId());
         return "redirect:/admin/product";
     }
 

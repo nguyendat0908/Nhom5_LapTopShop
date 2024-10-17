@@ -1,4 +1,4 @@
-package com.example.nhom5webapp_laptopshop.config;
+package com.example.nhom5WebApp_LapTopShop.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,4 +1,4 @@
-package com.example.nhom5webapp_laptopshop.domain;
+package com.example.nhom5WebApp_LapTopShop.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -8,6 +8,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Min;
 
 import java.util.*;
 
@@ -18,14 +19,16 @@ public class Cart {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    @Min(value = 0)
     private int sum;
 
-    // Cart one -> to one -> user
-    @OneToOne
+    // Cart one -> to one User
+    @OneToOne()
     @JoinColumn(name = "user_id")
     private User user;
 
-    // Cart one -> to many -> CartDetails
+    // Cart one -> to many CartDetails
     @OneToMany(mappedBy = "cart")
     List<CartDetail> cartDetails;
 
@@ -61,8 +64,4 @@ public class Cart {
         this.cartDetails = cartDetails;
     }
 
-    @Override
-    public String toString() {
-        return "Cart [id=" + id + ", sum=" + sum + "]";
-    }
 }
