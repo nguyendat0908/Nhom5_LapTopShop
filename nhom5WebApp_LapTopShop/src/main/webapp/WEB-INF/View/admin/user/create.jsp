@@ -32,79 +32,76 @@
             <div class="h4 pb-2 mb-2 border-bottom ">
               Create a user
             </div>
-            <form action="">
-                  <div class="row">
-                  <div class="col">
-                    <div class="form">
-                      <label for="exampleFormControlInput1" class="form-label">Email</label>
-                      <input class="form-control form-control-sm" type="text" placeholder=""
-                        aria-label=".form-control-sm example">
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="form">
-                      <label for="exampleFormControlInput1" class="form-label">Password</label>
-                      <input class="form-control form-control-sm" type="text" placeholder=""
-                        aria-label=".form-control-sm example">
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col">
-                    <div class="form">
-                      <label for="exampleFormControlInput1" class="form-label">Phone number</label>
-                      <input class="form-control form-control-sm" type="text" placeholder=""
-                        aria-label=".form-control-sm example">
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="form">
-                      <label for="exampleFormControlInput1" class="form-label">Full name</label>
-                      <input class="form-control form-control-sm" type="text" placeholder=""
-                        aria-label=".form-control-sm example">
-                    </div>
-                  </div>
-
-                </div>
-                <div class="row">
-                  <div class="col">
-                    <div class="form">
-                      <label for="exampleFormControlInput1" class="form-label">Adress</label>
-                      <input class="form-control form-control-sm" type="text" placeholder=""
-                        aria-label=".form-control-sm example">
-                    </div>
-                  </div>
-                </div>
-                <div style="padding-bottom: 10px;" class="row">
-                  <div class="col">
-                    <label for="exampleFormControlInput1" class="form-label">Role: </label>
-                    <select class="form-select form-select-sm" aria-label="Small select example">
-                      <option selected>Open this select menu</option>
-                      <option value="ADMIN">ADMIN</option>
-                      <option value="USER">USER</option>
-                    </select>
-                  </div>
-                  <div class="col">
-                    <div class="col-12">
-                      <label for="formFileSm" class="form-label">Avatar</label>
-                      <input class="form-control form-control-sm" id="formFileSm" type="file">
-
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col">
-                    <img style="width: 300px" src="https://deviet.vn/wp-content/uploads/2019/04/vuong-quoc-anh.jpg"
-                      class="img-thumbnail" alt="...">
-                  </div>
-                </div>
-                <div style="padding-top: 10px;">
-                  <button type="button" class="btn btn-primary">Create</button>
+            <div class="row">
+              <div class="col">
+                <div class="form">
+                  <label for="exampleFormControlInput1" class="form-label">Email</label>
+                  <input class="form-control form-control-sm" type="text" placeholder=""
+                    aria-label=".form-control-sm example">
                 </div>
               </div>
-            </form>
-            
+              <div class="col">
+                <div class="form">
+                  <label for="exampleFormControlInput1" class="form-label">Password</label>
+                  <input class="form-control form-control-sm" type="text" placeholder=""
+                    aria-label=".form-control-sm example">
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <div class="form">
+                  <label for="exampleFormControlInput1" class="form-label">Phone number</label>
+                  <input class="form-control form-control-sm" type="text" placeholder=""
+                    aria-label=".form-control-sm example">
+                </div>
+              </div>
+              <div class="col">
+                <div class="form">
+                  <label for="exampleFormControlInput1" class="form-label">Full name</label>
+                  <input class="form-control form-control-sm" type="text" placeholder=""
+                    aria-label=".form-control-sm example">
+                </div>
+              </div>
+
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="form">
+                  <label for="exampleFormControlInput1" class="form-label">Adress</label>
+                  <input class="form-control form-control-sm" type="text" placeholder=""
+                    aria-label=".form-control-sm example">
+                </div>
+              </div>
+            </div>
+            <div style="padding-bottom: 10px;" class="row">
+              <div class="col">
+                <label for="exampleFormControlInput1" class="form-label">Role: </label>
+                <select class="form-select form-select-sm" aria-label="Small select example">
+                  <option selected>Open this select menu</option>
+                  <option value="ADMIN">ADMIN</option>
+                  <option value="USER">USER</option>
+                </select>
+              </div>
+              <div class="col">
+                <div class="col-12">
+                  <label for="formFileSm" class="form-label">Avatar</label>
+                  <input class="form-control form-control-sm" id="formFileSm" type="file">
+
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <img style="width: 300px" src="https://deviet.vn/wp-content/uploads/2019/04/vuong-quoc-anh.jpg"
+                  class="img-thumbnail" alt="...">
+              </div>
+            </div>
+            <div style="padding-top: 10px;">
+              <button type="button" class="btn btn-primary">Create</button>
+            </div>
+          </div>
 
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

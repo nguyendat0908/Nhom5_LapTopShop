@@ -31,8 +31,8 @@
             <div class="container-create-product">
               <h4>Tạo mới một sản phẩm</h4>
               <hr />
-              <form:form method="post" action="/admin/product/create" modelAttribute="newProduct"
-                enctype="multipart/form-data" id="form-filter">
+              <form:form method="post" id="create-form" action="/admin/product/create" modelAttribute="newProduct"
+                enctype="multipart/form-data">
                 <div class="row mt-3">
                   <div class="col">
                     <div class="form">
@@ -125,10 +125,8 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
           crossorigin="anonymous"></script>
-        <!-- <script src="/js/scripts.js"></script>
-    <script src="/js/validate.js"></script> -->
-        <script src="../../../../resources/client/js/product.js"></script>
-
+        <script src="/js/scripts.js"></script>
+        <script src="/js/validate.js"></script>
       </body>
 
       </html>

@@ -21,6 +21,7 @@ function createURL() {
   const queryStringArr = [];
   console.log(selectedFactory);
 
+  // Đưa từng tham số truy vấn vào mảng
   if (selectedFactory.length > 0) {
     queryStringArr.push(
       `${getName(".factory-filter")}=${selectedFactory.join(",")}`
@@ -34,8 +35,11 @@ function createURL() {
     queryStringArr.push(`${getName(".price")}=${selectedPrice.join(",")}`);
   }
 
+  // Nối các tham số truy vấn bằng ký tự '&'
   const queryString = queryStringArr.join("&");
   const currentURL = window.location.pathname;
+
+  // Cập nhật url
   window.location.href = `${currentURL}?${queryString}`;
 }
 
