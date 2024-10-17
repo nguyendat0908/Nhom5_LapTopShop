@@ -131,8 +131,6 @@ footer h4 {
 .list p {
   font-weight: lighter;
 }
-<<<<<<< HEAD
-=======
 /* homepage */
 .product {
   /* box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3); */
@@ -170,7 +168,6 @@ footer h4 {
 .content {
   margin: 80px;
 }
->>>>>>> e7194b3c4499ee036b584a5c3724d66c0d69c55d
 .header-cart {
   position: relative;
 }
@@ -248,4 +245,59 @@ footer h4 {
     transform-origin: 90% top;
     opacity: 1;
   }
+}
+
+/* Cuong */
+.container-client-product {
+  margin: 40px;
+}
+.client-product {
+  display: flex;
+}
+.form-filter {
+  display: flex;
+  flex-wrap: wrap;
+}
+.client-product-filtering {
+  width: 40%;
+}
+.form-check {
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.form-check label {
+  opacity: 0.7;
+}
+.client-product-content {
+  width: 60%;
+}
+.client-product-filtering p {
+  margin-bottom: 10px;
+  text-decoration: dashed;
+}
+.pagination .page-link:hover {
+  background-color: rgb(113, 192, 30);
+  border-color: rgb(197, 176, 38);
+  color: white;
+}
+.pagination .page-item .page-link {
+  border-color: yellow;
+  color: rgb(65, 137, 16);
+}
+.pagination .page-item.disabled .page-link {
+  color: gray;
+  pointer-events: none;
+}
+.custom-btn {
+  border-color: rgb(238, 242, 23);
+  color: rgb(65, 137, 16);
+}
+.custom-btn:hover {
+  background-color: rgb(113, 192, 30);
+  color: white;
+}
+/* Thay đổi màu nền của checkbox khi được chọn */
+.form-check-input:checked {
+  background-color: green; /* Màu nền xanh khi checkbox được chọn */
+  border-color: green; /* Viền xanh cho checkbox khi chọn */
 }
