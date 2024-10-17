@@ -113,25 +113,29 @@
                             <p>Mức giá</p>
                             <div class="form-filter">
                                 <div class="form-check">
-                                    <input class="form-check-input price" type="checkbox" value="" name="">
+                                    <input class="form-check-input price" type="checkbox" value="duoi-10-trieu"
+                                        name="price">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         Dưới 10 Triệu
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input price" type="checkbox" value="">
+                                    <input class="form-check-input price" type="checkbox" value="10-15-trieu"
+                                        name="price">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         Từ 10-15 Triệu
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input price" type="checkbox" value="">
+                                    <input class="form-check-input price" type="checkbox" value="15-20-trieu"
+                                        name="price">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         Từ 15-20 Triệu
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input price" type="checkbox" value="">
+                                    <input class="form-check-input price" type="checkbox" value="tren-20-trieu"
+                                        name="price">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         Trên 20 triệu
                                     </label>
