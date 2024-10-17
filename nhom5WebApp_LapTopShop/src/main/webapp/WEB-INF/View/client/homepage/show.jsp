@@ -7,8 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css">
-        <link rel="stylesheet"
-            href="http://localhost:8080/Nhom5_LapTopShop/nhom5WebApp_LapTopShop/src/main/webapp/resources/client/css/style.css" />
+        <link rel="stylesheet" href="../../../../resources/client/css/style.css" />
         <title>Document</title>
     </head>
 
@@ -34,9 +33,9 @@
                                     </p>
                                     <p class="fs-7 text-secondary mt-1"><span>i5-10300H</span>, <span>RAM 8GB</span></p>
                                     <p class="mb-0">17.000.000 <span>đ</span></p>
-                                    <a href="#"
+                                    <button
                                         class="btn rounded-pill border border-warning-subtle text-success-emphasis mt-4"><i
-                                            class='bx bxs-shopping-bag'></i>Thêm vào giỏ hàng</a>
+                                            class='bx bxs-shopping-bag'></i>Thêm vào giỏ hàng</button>
                                 </div>
                             </div>
                         </div>
@@ -51,9 +50,9 @@
                                     </p>
                                     <p class="fs-7 text-secondary mt-1"><span>i5-10300H</span>, <span>RAM 8GB</span></p>
                                     <p class="mb-0">17.000.000 <span>đ</span></p>
-                                    <a href="#"
+                                    <button
                                         class="btn rounded-pill border border-warning-subtle text-success-emphasis mt-4"><i
-                                            class='bx bxs-shopping-bag'></i>Thêm vào giỏ hàng</a>
+                                            class='bx bxs-shopping-bag'></i>Thêm vào giỏ hàng</button>
                                 </div>
                             </div>
                         </div>
@@ -68,9 +67,9 @@
                                     </p>
                                     <p class="fs-7 text-secondary mt-1"><span>i5-10300H</span>, <span>RAM 8GB</span></p>
                                     <p class="mb-0">17.000.000 <span>đ</span></p>
-                                    <a href="#"
+                                    <button
                                         class="btn rounded-pill border border-warning-subtle text-success-emphasis mt-4"><i
-                                            class='bx bxs-shopping-bag'></i>Thêm vào giỏ hàng</a>
+                                            class='bx bxs-shopping-bag'></i>Thêm vào giỏ hàng</button>
                                 </div>
                             </div>
                         </div>
@@ -85,9 +84,9 @@
                                     </p>
                                     <p class="fs-7 text-secondary mt-1"><span>i5-10300H</span>, <span>RAM 8GB</span></p>
                                     <p class="mb-0">17.000.000 <span>đ</span></p>
-                                    <a href="#"
+                                    <button
                                         class="btn rounded-pill border border-warning-subtle text-success-emphasis mt-4"><i
-                                            class='bx bxs-shopping-bag'></i>Thêm vào giỏ hàng</a>
+                                            class='bx bxs-shopping-bag'></i>Thêm vào giỏ hàng</button>
                                 </div>
                             </div>
                         </div>
@@ -102,9 +101,9 @@
                                     </p>
                                     <p class="fs-7 text-secondary mt-1"><span>i5-10300H</span>, <span>RAM 8GB</span></p>
                                     <p class="mb-0">17.000.000 <span>đ</span></p>
-                                    <a href="#"
+                                    <button
                                         class="btn rounded-pill border border-warning-subtle text-success-emphasis mt-4"><i
-                                            class='bx bxs-shopping-bag'></i>Thêm vào giỏ hàng</a>
+                                            class='bx bxs-shopping-bag'></i>Thêm vào giỏ hàng</button>
                                 </div>
                             </div>
                         </div>
