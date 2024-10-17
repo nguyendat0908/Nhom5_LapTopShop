@@ -1,4 +1,8 @@
 {
   "java.compile.nullAnalysis.mode": "disabled",
+<<<<<<< HEAD
   "java.configuration.updateBuildConfiguration": "interactive"
+=======
+  "java.configuration.updateBuildConfiguration": "disabled"
+>>>>>>> bd29dc2c1769f584ed433164591e1281cbe1dcc3
 }
