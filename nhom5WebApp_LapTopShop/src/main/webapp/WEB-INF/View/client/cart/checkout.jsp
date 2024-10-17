@@ -126,7 +126,7 @@
                     </table>
 
                 </div>
-                <form action="" id="form-checkout">
+                <form action="" id="form-checkout" method="GET">
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="checkout-content">
                             <div class="form-checkout mt-4">

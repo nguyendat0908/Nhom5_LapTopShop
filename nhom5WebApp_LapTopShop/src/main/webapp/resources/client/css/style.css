@@ -321,6 +321,22 @@ footer h4 {
 }
 
 /* Cuong */
+.login-form {
+  width: 600px;
+  margin: auto;
+  margin-top: 20px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 30px;
+}
+.register-form {
+  width: 800px;
+  margin: auto;
+  margin-top: 20px;
+  background-color: white;
+  padding: 10px 10px;
+  border-radius: 30px;
+}
 .container-client-product {
   margin: 80px 130px 20px;
 }
