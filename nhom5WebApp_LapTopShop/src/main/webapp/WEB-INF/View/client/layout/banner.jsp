@@ -9,11 +9,12 @@
                         <h1 class="mb-5 display-3 text-primary">Hàng cao cấp<br /> Rẻ vô địch</h1>
                     </div>
                     <div class="col-md-12 col-lg-5">
-                        <div id="carouselId" class="carousel slide position-relative" data-bs-ride="carousel">
+                        <div id="carouselId" class="carousel slide position-relative rounded overflow-hidden"
+                            data-bs-ride="carousel">
                             <div class="carousel-inner" role="listbox">
                                 <div class="carousel-item active rounded">
-                                    <img src="/images/product/1.jpg"
-                                        class="img-fluid w-100 h-100 bg-secondary rounded" alt="First slide">
+                                    <img src="/images/product/1.jpg" class="img-fluid w-100 h-100 bg-secondary rounded"
+                                        alt="First slide">
                                     <a href="#" class="btn px-4 py-2 text-white rounded">Gaming</a>
                                 </div>
                                 <div class="carousel-item rounded">
