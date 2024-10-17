@@ -27,48 +27,44 @@
             <div class="client-product">
 
                 <div class="client-product-filtering">
-                    <form action="">
+                    <form action="" id="filter-form">
                         <div>
                             <p>Hãng sản xuất</p>
                             <div class="form-filter">
                                 <div class="form-check">
-                                    <input class="form-check-input" class="factory-filter" type="checkbox"
-                                        name="factory" value="APPLE" id="flexCheckDefault">
+                                    <input class="form-check-input factory-filter" type="checkbox" name="factory"
+                                        value="APPLE">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         Apple
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" class="factory-filter" type="checkbox"
-                                        name="factory" value="ASUS" id="flexCheckDefault">
+                                    <input class="form-check-input factory-filter" type="checkbox" name="factory"
+                                        value="ASUS">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         ASUS
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" class="factory-filter" type="checkbox"
-                                        value="LENOVO" id="flexCheckDefault">
+                                    <input class="form-check-input factory-filter" type="checkbox" value="LENOVO">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         LENOVO
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" class="factory-filter" type="checkbox" value="DELL"
-                                        id="flexCheckDefault">
+                                    <input class="form-check-input factory-filter" type="checkbox" value="DELL">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         DELL
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" class="factory-filter" type="checkbox" value="LG"
-                                        id="flexCheckDefault">
+                                    <input class="form-check-input factory-filter" type="checkbox" value="LG">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         LG
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" class="factory-filter" type="checkbox" value="ACER"
-                                        id="flexCheckDefault">
+                                    <input class="form-check-input factory-filter" type="checkbox" value="ACER">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         ACER
                                     </label>
@@ -79,32 +75,33 @@
                             <p>Mục đích sử dụng</p>
                             <div class="form-filter">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="GAMING"
-                                        id="flexCheckDefault">
+                                    <input class="form-check-input purpose" type="checkbox" value="GAMING"
+                                        name="purpose">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         Gaming
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <input class="form-check-input purpose" type="checkbox" value="OFFICE"
+                                        name="purpose">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         Sinh viên-Văn phòng
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <input class="form-check-input purpose" type="checkbox" value="">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         Thiết kế đồ họa
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <input class="form-check-input purpose" type="checkbox" value="">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         Mỏng nhẹ
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <input class="form-check-input purpose" type="checkbox" value="">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         Doanh nhân
                                     </label>
@@ -116,26 +113,25 @@
                             <p>Mức giá</p>
                             <div class="form-filter">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
-                                        name="">
+                                    <input class="form-check-input price" type="checkbox" value="" name="">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         Dưới 10 Triệu
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <input class="form-check-input price" type="checkbox" value="">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         Từ 10-15 Triệu
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <input class="form-check-input price" type="checkbox" value="">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         Từ 15-20 Triệu
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <input class="form-check-input price" type="checkbox" value="">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         Trên 20 triệu
                                     </label>
@@ -146,19 +142,19 @@
                             <p>Sắp xếp</p>
                             <div class="form-filter">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <input class="form-check-input sort" type="checkbox" value="">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         Giá tăng dần
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <input class="form-check-input sort" type="checkbox" value="">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         Giá giảm dần
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <input class="form-check-input sort" type="checkbox" value="">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         Không
                                     </label>
@@ -319,6 +315,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
+        <script src="../../../../resources/client/js/product.js"></script>
     </body>
 
     </html>
