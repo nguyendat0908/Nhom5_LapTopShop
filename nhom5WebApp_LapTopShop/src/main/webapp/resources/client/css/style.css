@@ -249,7 +249,7 @@ footer h4 {
 
 /* Cuong */
 .container-client-product {
-  margin: 40px;
+  margin: 80px 130px 20px;
 }
 .client-product {
   display: flex;
@@ -257,6 +257,9 @@ footer h4 {
 .form-filter {
   display: flex;
   flex-wrap: wrap;
+}
+.form-filter input {
+  cursor: pointer;
 }
 .client-product-filtering {
   width: 40%;
@@ -291,6 +294,7 @@ footer h4 {
 .custom-btn {
   border-color: rgb(238, 242, 23);
   color: rgb(65, 137, 16);
+  margin-top: 20px;
 }
 .custom-btn:hover {
   background-color: rgb(113, 192, 30);
